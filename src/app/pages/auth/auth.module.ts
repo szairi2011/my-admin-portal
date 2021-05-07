@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { SignupFormComponent } from './components/signup-form/signup-form.component';
 
 
 
@@ -21,7 +22,8 @@ import { MatButtonModule } from '@angular/material/button';
   declarations: [
     AuthPageComponent,
     LoginFormComponent,
-    YearPipe
+    YearPipe,
+    SignupFormComponent
   ],
   imports: [
     CommonModule,

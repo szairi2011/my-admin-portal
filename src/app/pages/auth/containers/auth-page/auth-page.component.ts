@@ -39,14 +39,22 @@ export class AuthPageComponent implements OnInit {
 
   // Login the autenticated user
   login() {
-
     if (this.loggedInUser) {
 
       localStorage.setItem('userID', this.loggedInUser.firstname); // session token for logged in user
       localStorage.setItem('user', JSON.stringify(this.loggedInUser)); // For user profile screen
       this.router.navigate([routes.DASHBOARD_PAGE]).then();
     }
+  }
 
+  signupUser(user: User) {
+    this.authService.signup(user)
+      .subscribe(
+        u => {
+          this.loggedInUser = u;
+          this.login();
+        }
+      );
   }
 
 }

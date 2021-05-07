@@ -19,4 +19,10 @@ export class AuthService {
       }
     )
   }
+
+  signup(user: User) {
+    // TODO: replace with user creation request
+    return of( user );
+
+  }
 }
