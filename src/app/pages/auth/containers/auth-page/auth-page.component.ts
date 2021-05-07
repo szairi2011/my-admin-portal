@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { routes } from 'src/app/consts';
 import { AuthService } from '../../services';
-import { YearPipe } from '../../pipes';
 
 @Component({
   selector: 'app-auth-page',

@@ -6,7 +6,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { AuthPageComponent } from './containers/auth-page';
 import { AuthGuard } from './guards';
 import { AuthService } from './services/auth.service';
-import { LoginFormComponent } from './components/login-form/login-form.component';
+
 import { YearPipe } from './pipes';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -14,15 +14,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { SignupFormComponent } from './components/signup-form/signup-form.component';
-
+import { LoginFormComponent, SignupFormComponent } from './components';
 
 
 @NgModule({
   declarations: [
     AuthPageComponent,
-    LoginFormComponent,
     YearPipe,
+    LoginFormComponent,
     SignupFormComponent
   ],
   imports: [
