@@ -16,6 +16,10 @@ const routes: Routes = [
     path: 'login',
     pathMatch: 'full',
     component: AuthPageComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'login'
   }
 ];
 
