@@ -1,3 +1,4 @@
+import { EmailService } from './services';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -35,7 +36,8 @@ import { LoginFormComponent, SignupFormComponent } from './components';
   ],
   providers: [
     AuthGuard,
-    AuthService
+    AuthService,
+    EmailService
   ]
 })
 export class AuthModule { }
