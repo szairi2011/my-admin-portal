@@ -3,16 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from './containers/header/header.component';
 
-import { SearchComponent } from './components';
-import { NotificationsComponent } from './components';
-import { EmailComponent } from './components';
+import { SearchComponent, NotificationsComponent, EmailComponent, UserComponent } from './components';
+
+import { InitialsPipe } from './pipes/initials.pipe';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
-import { InitialsPipe } from './pipes/initials.pipe';
 
 
 
@@ -22,7 +21,8 @@ import { InitialsPipe } from './pipes/initials.pipe';
     SearchComponent,
     NotificationsComponent,
     EmailComponent,
-    InitialsPipe
+    InitialsPipe,
+    UserComponent
   ],
   imports: [
     CommonModule,

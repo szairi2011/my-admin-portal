@@ -18,6 +18,6 @@
     <app-search></app-search>
     <app-notifications></app-notifications>
     <app-email [emails]="emails$ | async"></app-email>
-    <!-- <app-user [user]="user$ | async" (signout)="signout()"></app-user> -->
+    <app-user [user]="user$ | async" (signOut)="signout()"></app-user>
   </div>
 </mat-toolbar>

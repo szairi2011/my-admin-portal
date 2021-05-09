@@ -15,7 +15,8 @@ export class AuthService {
     return of(
       {
         firstname: "sofien",
-        lastname: "lastname"
+        lastname: "lastname",
+        email: 'sofien.zairi@fisglobal.com'
       }
     )
   }
@@ -23,6 +24,17 @@ export class AuthService {
   signup(user: User) {
     // TODO: replace with user creation request
     return of( user );
+  }
 
+  getLoggedInUser(): Observable<User> {
+    const user: User = JSON.parse(localStorage.getItem('user'));
+    return of(
+      user
+    );
+  }
+
+  signout() {
+    localStorage.removeItem('userID');
+    localStorage.removeItem('user');
   }
 }
