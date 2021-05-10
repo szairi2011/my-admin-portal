@@ -1,14 +1,13 @@
-import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent implements OnInit, OnDestroy, AfterViewInit {
+export class LayoutComponent implements OnInit, OnDestroy {
 
   @ViewChild('sidenav') sidenav: MatSidenav;
 
@@ -21,7 +20,7 @@ export class LayoutComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit() {
 
-    // Make the sidenav responsive to small footprint devices
+    // Create a responsive sidenav to small footprint devices
     this.breakpointObserver.observe('(max-width: 1024px)')
         .subscribe((state: BreakpointState) => {
           console.log(state);
@@ -34,17 +33,6 @@ export class LayoutComponent implements OnInit, OnDestroy, AfterViewInit {
             this.mode = 'side';
           }
         });
-
-  }
-
-  ngAfterViewInit(): void {
-
-    /*
-    NB: Include setTimeout wrapper to avoid the known ng error "ExpressionChangedAfterItHasBeenCheckedError".
-    This error seem to happen in dev mode only
-    */
-
-
 
   }
 
