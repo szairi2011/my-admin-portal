@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-layout',
@@ -11,31 +12,40 @@ export class LayoutComponent implements OnInit, OnDestroy, AfterViewInit {
 
   @ViewChild('sidenav') sidenav: MatSidenav;
 
-  public isShowSidebar: boolean = true;
+  isShowSidebar: boolean;
 
-  constructor( private breakpointObserver: BreakpointObserver ) {}
+  mode: string;
+
+  constructor(private breakpointObserver: BreakpointObserver) { }
 
 
   ngOnInit() {
+
+    // Make the sidenav responsive to small footprint devices
+    this.breakpointObserver.observe('(max-width: 1024px)')
+        .subscribe((state: BreakpointState) => {
+          console.log(state);
+
+          if (state.matches) {
+            this.isShowSidebar = false;
+            this.mode = 'over';
+          } else {
+            this.isShowSidebar = true;
+            this.mode = 'side';
+          }
+        });
 
   }
 
   ngAfterViewInit(): void {
 
-    // Make the sidenav responsive to small devices
-    this.breakpointObserver.observe('(max-width: 1024px)')
-      .subscribe( (state: BreakpointState) => {
+    /*
+    NB: Include setTimeout wrapper to avoid the known ng error "ExpressionChangedAfterItHasBeenCheckedError".
+    This error seem to happen in dev mode only
+    */
 
-        console.log(state);
 
-        if (state.matches) {
-          // this.isShowSidebar = false;
-          this.sidenav.mode = 'over';
-        } else {
-          this.isShowSidebar = true;
-          this.sidenav.mode = 'side';
-        }
-      });
+
   }
 
   public ngOnDestroy(): void {

@@ -3,7 +3,7 @@
 <mat-sidenav-container class="layout">
   <mat-sidenav
   #sidenav
-  mode = 'side'
+  [mode] = "mode === 'side' ? 'side':'over'"
   [(opened)]="isShowSidebar"
   class="layout-sidebar"
 
