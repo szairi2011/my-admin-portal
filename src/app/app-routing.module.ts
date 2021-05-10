@@ -7,15 +7,20 @@ import { DashboardPageComponent } from './pages/dashboard/containers/dashboard-p
 
 const routes: Routes = [
   {
+    path: 'login',
+    pathMatch: 'full',
+    component: AuthPageComponent
+  },
+  {
+    path: 'user',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./pages/user/user.module').then(m => m.UserModule)
+  },
+  {
     path: 'dashboard',
     pathMatch: 'full',
     canActivate: [AuthGuard],
     component: DashboardPageComponent
-  },
-  {
-    path: 'login',
-    pathMatch: 'full',
-    component: AuthPageComponent
   },
   {
     path: '**',

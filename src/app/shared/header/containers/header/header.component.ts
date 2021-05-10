@@ -2,7 +2,7 @@ import { routes } from './../../../../consts/routes';
 import { Observable } from 'rxjs';
 import { Email, User } from './../../../../pages/auth/models';
 import { EmailService, AuthService } from './../../../../pages/auth/services';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,7 +12,9 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  isMenuOpened: boolean = true;
+  @Input() isMenuOpened: boolean = true;
+
+  @Output() toggleSidenav: EventEmitter<void> = new EventEmitter();
 
   emails$: Observable<Email[]>;
 
@@ -32,6 +34,7 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.isMenuOpened = !this.isMenuOpened;
+    this.toggleSidenav.emit();
   }
 
   signout() {

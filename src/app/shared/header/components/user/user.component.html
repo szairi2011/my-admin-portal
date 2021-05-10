@@ -6,7 +6,7 @@
     <h4 class="user-menu-title__name">{{user.firstname}} {{user.lastname}}</h4>
     <a class="user-menu-title__link" [href]="user.email">{{user.email}}</a>
   </div>
-  <button mat-menu-item class="user-menu__item-title" (click) = "navigate(routes.DASHBOARD_PAGE)">
+  <button mat-menu-item class="user-menu__item-title" [routerLink]="routes.USER_PROFILE_PAGE" routerLinkActive="router-link-active" >
       <mat-icon class="user-menu-icon">person</mat-icon>Profile
   </button>
   <button mat-menu-item class="user-menu__item-title">

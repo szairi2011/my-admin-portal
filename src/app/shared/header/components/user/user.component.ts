@@ -27,9 +27,10 @@ export class UserComponent implements OnInit {
     this.signOut.emit();
   }
 
-  navigate(url: string) {
+  // No longer required; using routerLink instead
+  /* navigate(url: string) {
     console.log(url);
     this.router.navigate([url]);
-  }
+  } */
 
 }

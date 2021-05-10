@@ -1,3 +1,4 @@
+import { SidebarModule } from './sidebar/sidebar.module';
 import { HeaderComponent } from './header/containers/header/header.component';
 import { HeaderModule } from './header/header.module';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,15 +11,18 @@ import { LayoutComponent } from './layout/layout.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     SettingsMenuComponent,
-    LayoutComponent
+    LayoutComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
     HeaderModule,
+    SidebarModule,
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
@@ -26,7 +30,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   ],
   exports: [
     SettingsMenuComponent,
-    LayoutComponent
+    LayoutComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }
