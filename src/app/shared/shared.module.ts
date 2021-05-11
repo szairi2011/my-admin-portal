@@ -1,6 +1,7 @@
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { HeaderModule } from './header/header.module';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SettingsMenuComponent } from './ui-elements/settings-menu/settings-menu.component';
 
@@ -24,6 +25,7 @@ import { MatListModule } from '@angular/material/list';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     HeaderModule,
     SidebarModule,
     MatButtonModule,

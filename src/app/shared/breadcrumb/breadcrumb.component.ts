@@ -1,3 +1,4 @@
+import { BreadcrumbItem } from './../models';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BreadcrumbComponent implements OnInit {
 
+  items: BreadcrumbItem[];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.items = [
+      {
+        title: 'app',
+        link: '/dashboard'
+      },
+      {
+        title: 'user',
+        link: '/user/list'
+      },
+      {
+        title: 'profile',
+        link: '/user/profile'
+      }
+    ]
   }
 
 }
