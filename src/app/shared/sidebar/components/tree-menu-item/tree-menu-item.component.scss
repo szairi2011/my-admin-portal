@@ -1,10 +1,11 @@
-// Testing nested nav items
-
+@import "src/app/styles/colors";
+@import "src/app/styles/font";
 @import "src/app/styles/variables";
 
 .mat-list-item {
-  // width: auto;
-  // padding-left: 10px;
+  & .active {
+    color: $sidenav-tree-menu-item-background-color-active;
+  }
 }
 
 .mat-icon {
@@ -29,7 +30,7 @@
   transform: scaleY(0);
   transform-origin: top;
   margin-top: -20px;
-  padding-left: 30px;
+  padding-left: 60px;
   cursor: pointer;
 }
 .submenu.expanded {

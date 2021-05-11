@@ -9,7 +9,7 @@ export class TreeMenuItemComponent implements OnInit {
 
   @Input() parent: string;
   @Input() children: NavItemChild[];
-  showSubmenu: boolean = false;
+  showSubmenu: boolean = true;
 
   constructor() { }
 

@@ -68,7 +68,7 @@ export class BreadcrumbComponent implements OnInit {
     return of(this.items);
   } */
 
-  createBreadcrumbs(route, url: string = '', breadcrumbs = [{ title: 'home', link: '/home' }]) {
+  createBreadcrumbs(route, url: string = '', breadcrumbs = [{ title: 'home', link: '/dashboard' }]) {
     const children = route.firstChild;
 
     if (!children) {
