@@ -4,20 +4,24 @@ import { CommonModule } from '@angular/common';
 
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTreeModule } from '@angular/material/tree';
 
 import { RouterModule } from '@angular/router';
+import { TreeMenuItemComponent } from './components/tree-menu-item/tree-menu-item.component';
 
 
 
 @NgModule({
   declarations: [
-    LeftnavComponent
+    LeftnavComponent,
+    TreeMenuItemComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatTreeModule
   ],
   exports: [
     LeftnavComponent
