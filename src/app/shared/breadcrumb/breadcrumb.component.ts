@@ -20,7 +20,7 @@ export class BreadcrumbComponent implements OnInit {
     private activeRoute: ActivatedRoute
   ) {
 
-    this.items = [
+    /* this.items = [
       {
         title: 'app',
         link: '/dashboard'
@@ -33,9 +33,13 @@ export class BreadcrumbComponent implements OnInit {
         title: 'profile',
         link: '/user/profile'
       }
-    ]
+    ] */
 
-
+    /*
+      Subscribe to router event when navigation ends successfully,
+      then extract the active route data, i.e. url and "breadcrumb" label defined in routing.
+      NB: If no "breadcrumb" label is defined at routing def level, then label value will default to path
+    */
     this.router.events.pipe(
       filter(event => {
         console.log("Router event type: ", event);
@@ -46,7 +50,7 @@ export class BreadcrumbComponent implements OnInit {
         const root: ActivatedRoute = this.activeRoute.root;
         console.log("The activated route root: ", root);
         // return this.createBreadCrumbs();
-        this.breadcrumbs$ = this.createBreadcrumbs( root );
+        this.breadcrumbs$ = this.createBreadcrumbs(root);
       })
     ).subscribe();
   }
@@ -64,17 +68,25 @@ export class BreadcrumbComponent implements OnInit {
     return of(this.items);
   } */
 
-  createBreadcrumbs( route, url: string = '', breadcrumbs = [ {title: 'home', link: '/home'}] ) {
+  createBreadcrumbs(route, url: string = '', breadcrumbs = [{ title: 'home', link: '/home' }]) {
     const children = route.firstChild;
 
-    if( !children ){
+    if (!children) {
       return [...breadcrumbs];
     }
 
     const routeURL: string = children.snapshot.url
       .map(segment => segment.path)
       .join('/');
-    const label = children.snapshot.data['breadcrumb'];
+
+    // If no routing label is specified in the routing definition, default label value to url path string
+    let label;
+    if (children.snapshot.data.hasOwnProperty('breadcrumb')) {
+      label = children.snapshot.data['breadcrumb'];
+    } else {
+      label = routeURL;
+    }
+
 
     if (routeURL !== '') {
       url += `/${routeURL}`;
@@ -86,7 +98,7 @@ export class BreadcrumbComponent implements OnInit {
       link: url
     }
 
-    return this.createBreadcrumbs( children, url,  [...breadcrumbs, breadcrumb])
+    return this.createBreadcrumbs(children, url, [...breadcrumbs, breadcrumb])
   }
 
 }

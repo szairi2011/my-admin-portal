@@ -23,7 +23,6 @@ const routes: Routes = [
     pathMatch: 'full',
     canActivate: [AuthGuard],
     component: DashboardPageComponent,
-    // data: { title: 'dashboard' }
     data: { breadcrumb: 'dashboards' }
   },
   {
