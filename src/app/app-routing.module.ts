@@ -1,3 +1,4 @@
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthPageComponent } from './pages/auth/containers/auth-page';
@@ -26,8 +27,13 @@ const routes: Routes = [
     data: { breadcrumb: 'dashboards' }
   },
   {
+    path: '404',
+    component: NotFoundComponent
+  },
+  {
     path: '**',
-    redirectTo: 'dashboard'
+    // redirectTo: 'dashboard'
+    redirectTo: '404'
   }
 ];
 
