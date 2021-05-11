@@ -14,22 +14,30 @@ const routes: Routes = [
   {
     path: 'user',
     canActivate: [AuthGuard],
-    loadChildren: () => import('./pages/user/user.module').then(m => m.UserModule)
+    loadChildren: () => import('./pages/user/user.module').then(m => m.UserModule),
+    // data: { title: 'user' }
+    data: { breadcrumb: 'users' }
   },
   {
     path: 'dashboard',
     pathMatch: 'full',
     canActivate: [AuthGuard],
-    component: DashboardPageComponent
+    component: DashboardPageComponent,
+    // data: { title: 'dashboard' }
+    data: { breadcrumb: 'dashboards' }
   },
   {
     path: '**',
-    redirectTo: 'login'
+    redirectTo: 'dashboard'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(
+    routes,
+    {
+      useHash: true
+    })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

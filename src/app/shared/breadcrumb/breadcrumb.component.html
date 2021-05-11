@@ -1,12 +1,13 @@
 <mat-card class="breadcrumb-card">
   <mat-card-content>
     <mat-list class="breadcrumb-list">
-      <mat-list-item *ngFor="let item of items; let i = index" class="breadcrumb-list-item">
-        <span [ngClass]="{'text-margin': i > 0, 'text-first-upper': true}" [routerLink]="item.link" routerLinkActive="active" >
-          {{item.title}}
+      <mat-list-item *ngFor="let breadcrumb of breadcrumbs$ ; let i = index; last as isLast" class="breadcrumb-list-item">
+        <span [ngClass]="{'text-margin': i > 0, 'text-first-upper': true}" [routerLink]="breadcrumb.link" routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact:true}">
+          {{breadcrumb.title}}
         </span>
         <!-- <mat-icon *ngIf="i < items.length - 1">arrow_right</mat-icon> -->
-        <mat-icon *ngIf="i < items.length - 1">chevron_right</mat-icon>
+        <mat-icon *ngIf="!isLast">chevron_right</mat-icon>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
