@@ -1,0 +1,35 @@
+<mat-card class="user-tasks-card">
+  <mat-card-title class="user-tasks-title-wrapper">
+    <p class="user-tasks-title">Tasks</p>
+    <!-- <app-date-menu></app-date-menu> -->
+  </mat-card-title>
+  <mat-card-content>
+    <mat-tab-group color="warn">
+      <mat-tab label="Today">
+        <div class="user-task-wrapper">
+          <div class="inner-user-task-wrapper">
+            <p class="task-time task-done">10:21</p>
+            <div class="task-circle"></div>
+            <p class="task-text task-done">Get back to Walid about Oumeima stay extension</p>
+          </div>
+          <!-- <button class="settings-button" mat-mini-fab >
+            <mat-icon class="task-actions">more_vert</mat-icon>
+          </button> -->
+          <mat-icon class="task-settings">more_vert</mat-icon>
+          <!-- <app-settings-menu></app-settings-menu> -->
+        </div>
+
+        <div class="user-task-wrapper">
+          <div class="inner-user-task-wrapper">
+            <p class="task-time ">10:21</p>
+            <div class="task-circle"></div>
+            <p class="task-text ">Get back to Walid about Oumeima stay extension</p>
+          </div>
+          <mat-icon class="task-settings">more_vert</mat-icon>
+        </div>
+      </mat-tab>
+      <mat-tab label="This Week">This Week content</mat-tab>
+      <mat-tab label="This Month">This Month</mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>

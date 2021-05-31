@@ -1,4 +1,4 @@
-import { ListComponent } from './list';
+import { UserListPageComponent } from './list/containers/user-list-page';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProfilePageComponent } from './profile/containers/profile-page';
@@ -12,7 +12,7 @@ const routes: Routes = [
   {
     path: 'list',
     pathMatch: 'full',
-    component: ListComponent,
+    component: UserListPageComponent,
     data: { breadcrumb: 'list'}
   },
   {
