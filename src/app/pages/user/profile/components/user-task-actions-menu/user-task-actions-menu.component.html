@@ -1,0 +1,11 @@
+<button class="settings-button" mat-mini-fab [matMenuTriggerFor]="settings">
+  <mat-icon class="settings-button__icon">more_vert</mat-icon>
+</button>
+<div class="settings-menu">
+  <mat-menu #settings="matMenu" xPosition="before">
+    <button class="settings-menu__item" mat-menu-item>Mark complete</button>
+    <button class="settings-menu__item" mat-menu-item>Reactivate</button>
+    <button class="settings-menu__item" mat-menu-item>Delete</button>
+    <button class="settings-menu__item" mat-menu-item>Edit</button>
+  </mat-menu>
+</div>
