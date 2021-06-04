@@ -30,3 +30,10 @@ A number of start up scripts have been created for convenience:
   To use @ngrx/schematics as the default collection in our Angular CLI project, we can add it to our angular.json:
       `ng config cli.defaultCollection @ngrx/schematics`
 
+  c. Create the app store:
+  We first create the root level store as a central location for all feature reducers later:
+  Note: We may include --dry-run flag to be in the safe side first
+      `ng generate store store --module=app.module.ts --root=true --state-path=store --state-interface=AppState`
+
+      
+

@@ -11,6 +11,10 @@ import { UserModule } from './pages/user/user.module';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 import { MatCardModule } from '@angular/material/card';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,9 @@ import { MatCardModule } from '@angular/material/card';
     DashboardModule,
     UserModule,
     SharedModule,
-    MatCardModule
+    MatCardModule,
+    StoreModule.forRoot(reducers, { metaReducers }),
+    !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
   providers: [],
   bootstrap: [AppComponent]
