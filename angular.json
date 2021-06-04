@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "my-admin-portal"
+  "defaultProject": "my-admin-portal",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
