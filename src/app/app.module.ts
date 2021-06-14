@@ -1,3 +1,4 @@
+import { EffectsModule } from '@ngrx/effects';
 import { SharedModule } from './shared/shared.module';
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 import { AuthModule } from './pages/auth/auth.module';
@@ -31,7 +32,8 @@ import { environment } from '../environments/environment';
     SharedModule,
     MatCardModule,
     StoreModule.forRoot(reducers, { metaReducers }),
-    !environment.production ? StoreDevtoolsModule.instrument() : []
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    EffectsModule.forRoot() // NB: It is mandatory to register a root effect to kisckstart the effects providers for other feature effects, otherwise effects won't work at start up
   ],
   providers: [],
   bootstrap: [AppComponent]

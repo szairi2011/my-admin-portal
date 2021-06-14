@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 NB:
 A number of start up scripts have been created for convenience:
-
+1. `npm generate` to create a fake data for the development environment
 1. `npm run dev` to start the json-server database, and bootstrap the Angular application in parallel.
 2. `npm run generate` to generate a fake database for a convenient development experience
 
@@ -21,19 +21,35 @@ A number of start up scripts have been created for convenience:
       `npm install @ngrx/store-devtools --save`
       `npm install @ngrx/entity --save`
     
-    We could also install above packages in a single command:
+    We could also install above packages in a single command like so:
       `npm install @ngrx/{store, effects, router-store, store-devtools, entity} --save`
 
       `npm install @ngrx/schematics --save-dev` NB: Make sure to save schematics as a dev dependency
      
-  b. Set the ngrx schematics:
-  To use @ngrx/schematics as the default collection in our Angular CLI project, we can add it to our angular.json:
+  b. Set up the ngrx schematics:
+    To use @ngrx/schematics as the default collection in our Angular CLI project, we can add it to our angular.json:
       `ng config cli.defaultCollection @ngrx/schematics`
 
   c. Create the app store:
-  We first create the root level store as a central location for all feature reducers later:
-  Note: We may include --dry-run flag to be in the safe side first
+    We first create the root level store as a central location for all feature reducers later:
+      Note: We may include --dry-run flag to be in the safe side first
       `ng generate store store --module=app.module.ts --root=true --state-path=store --state-interface=AppState`
 
-      
+  d. Generate an actions file for a feature state:
+    Again we can use ngrx schematics to reduce boilerplate:
+      `ng g action store/actions/users/user-task --api=true --skip-tests  --dry-run` 
+    NB: 
+      - Proceed without a dry run if we are happy with the steps involved ...
+      - A project called ngrx-course, in the same folder, can be followed as a learning material. It contains ngrx gists and handy ngrx schematics hints that could be used as a quick startup material  
+    
+  ====
 
+  d. Generate ngrx feature files in few steps:
+  Here is a hint on how we can leverage schematics to scaffold ngrx components quicker, while leveraging the power of ngrx entity:
+    1. ng generate entity store/user-task --group --reducers ./index.ts --skip-tests --module ../pages/user/profile/profile.module.ts  --dry-run
+    2. ng generate effect store/effects/user-task --module pages/user/profile/profile.module.ts --skip-tests --dry-run
+    3. ng generate selector store/selectors/user-task --skip-tests --dry-run
+
+========
+
+4. ng g feature store/features/user-task --group --reducers ../index.ts --module pages/user/profile/profile.module.ts --skip-tests --dry-run

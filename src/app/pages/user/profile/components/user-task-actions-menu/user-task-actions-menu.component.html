@@ -3,8 +3,10 @@
 </button>
 <div class="settings-menu">
   <mat-menu #settings="matMenu" xPosition="before">
-    <button class="settings-menu__item" mat-menu-item>Mark complete</button>
-    <button class="settings-menu__item" mat-menu-item>Reactivate</button>
+    <button class="settings-menu__item" mat-menu-item (click) = "completeTask(task)"
+      [disabled]="task.isComplete">Mark as complete</button>
+    <button class="settings-menu__item" mat-menu-item (click) = "reactivateTask(task)"
+      [disabled]="!task.isComplete">Reactivate</button>
     <button class="settings-menu__item" mat-menu-item>Delete</button>
     <button class="settings-menu__item" mat-menu-item>Edit</button>
   </mat-menu>

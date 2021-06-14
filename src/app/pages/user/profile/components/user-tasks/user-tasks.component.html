@@ -6,22 +6,24 @@
   <mat-card-content>
     <mat-tab-group color="warn">
       <mat-tab label="Today">
-        <div class="user-task-wrapper">
+        <!-- <div class="user-task-wrapper">
           <div class="inner-user-task-wrapper">
             <p class="task-time task-done">10:21</p>
             <div class="task-circle"></div>
             <p class="task-text task-done">Get back to Walid about Oumeima stay extension</p>
           </div>
           <app-user-task-actions-menu></app-user-task-actions-menu>
-        </div>
+        </div> -->
 
-        <div class="user-task-wrapper">
+        <div class="user-task-wrapper" *ngFor="let task of (userTasks$ | async)">
           <div class="inner-user-task-wrapper">
-            <p class="task-time ">11:15</p>
+            <p [ngClass]="{'task-time': true,'task-done': task.isComplete}">{{task.time}}</p>
             <div class="task-circle"></div>
-            <p class="task-text ">WD -- extend Oumeima's stay with us</p>
+            <p [ngClass]="{'task-text': true,'task-done': task.isComplete}">{{task.title}}</p>
           </div>
-          <app-user-task-actions-menu></app-user-task-actions-menu>
+          <app-user-task-actions-menu
+            [task] = "task">
+          </app-user-task-actions-menu>
         </div>
       </mat-tab>
       <mat-tab label="This Week">This Week content</mat-tab>

@@ -36,5 +36,9 @@
     &:hover {
       background-color: $settings-menu-background-color-hover;
     }
+
+    &:disabled {
+      color: $light-grey;
+    }
   }
 }

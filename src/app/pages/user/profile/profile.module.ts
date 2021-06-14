@@ -13,6 +13,13 @@ import { MatMenuModule } from '@angular/material/menu';
 import { UserTaskActionsMenuComponent } from './components/user-task-actions-menu';
 import { UserTasksComponent } from './components/user-tasks';
 import { ProfilePageComponent } from './containers/profile-page';
+import { StoreModule } from '@ngrx/store';
+import * as fromUserTask from '../../../store/reducers/user-task.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { UserTaskEffects } from '../../../store/effects/user-task.effects';
+
+import { UserTaskService } from './services/user-task.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,13 +29,21 @@ import { ProfilePageComponent } from './containers/profile-page';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     SharedModule,
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
     MatTabsModule,
-    MatMenuModule
+    MatMenuModule,
+    StoreModule.forFeature(fromUserTask.userTasksFeatureKey, fromUserTask.reducer),
+    EffectsModule.forFeature([UserTaskEffects]),
+    // StoreModule.forFeature(fromUserTask.userTasksFeatureKey, fromUserTask.reducer),
+    // EffectsModule.forFeature([UserTaskEffects])
+  ],
+  providers: [
+    UserTaskService
   ]
 })
 export class ProfileModule { }
