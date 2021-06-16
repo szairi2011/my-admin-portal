@@ -7,7 +7,7 @@
       [disabled]="task.isComplete">Mark as complete</button>
     <button class="settings-menu__item" mat-menu-item (click) = "reactivateTask(task)"
       [disabled]="!task.isComplete">Reactivate</button>
-    <button class="settings-menu__item" mat-menu-item>Delete</button>
-    <button class="settings-menu__item" mat-menu-item>Edit</button>
+    <button class="settings-menu__item" mat-menu-item (click)="delete(task)">Delete</button>
+    <button class="settings-menu__item" mat-menu-item (click)="edit(task)">Edit</button>
   </mat-menu>
 </div>

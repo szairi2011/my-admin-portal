@@ -59,9 +59,31 @@ export const reducer = createReducer(
   on(UserTaskActions.updateUserTasks,
     (state, action) => userTaskAdapter.updateMany(action.userTasks, state)
   ),
+
+  /* Delete user task */
   on(UserTaskActions.deleteUserTask,
-    (state, action) => userTaskAdapter.removeOne(action.id, state)
+    (state, action) => {
+      return { ... state, loading: true}
+    }
   ),
+
+  on(UserTaskActions.deleteUserTaskSuccess,
+    (state, action) => userTaskAdapter.removeOne(action.id, {
+      ... state,
+      loading: false
+    })),
+
+  on(UserTaskActions.deleteUserTaskFailure,
+    (state, action) => {
+      return {
+        ...state,
+        loading: false,
+        error: action.error
+      }
+    }
+  ),
+
+  /* */
   on(UserTaskActions.deleteUserTasks,
     (state, action) => userTaskAdapter.removeMany(action.ids, state)
   ),

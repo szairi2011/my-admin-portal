@@ -62,10 +62,24 @@ export const updateUserTasks = createAction(
   props<{ userTasks: Update<UserTask>[] }>()
 );
 
+/* Delete user task including sucess and failure */
 export const deleteUserTask = createAction(
   '[UserTask/API] Delete UserTask',
   props<{ id: string }>()
 );
+
+export const deleteUserTaskSuccess = createAction(
+  '[UserTask/API] Delete UserTask Success',
+  props<{ id: string }>()
+);
+
+export const deleteUserTaskFailure = createAction(
+  '[UserTask/API] Delete UserTask Failure',
+  props<{ error: Error }>()
+);
+
+
+/* */
 
 export const deleteUserTasks = createAction(
   '[UserTask/API] Delete UserTasks',

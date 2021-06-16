@@ -22,4 +22,8 @@ export class UserTaskService {
   updateUserTask(data: Update<UserTask> ): Observable<any> {
     return this.http.patch(this.user_task_api_url + data.id, data.changes);
   }
+
+  deleteUserTask(_id: string ): Observable<any> {
+    return this.http.delete(this.user_task_api_url + _id);
+  }
 }

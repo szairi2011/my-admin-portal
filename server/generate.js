@@ -1,5 +1,6 @@
 // Copied from https://github.com/oopcoders/NGRX-Course/blob/master/server/generate.js
 var faker = require("faker");
+var uuid = require("uuid");
 
 var database = {
   tasks: [],
@@ -10,7 +11,7 @@ var database = {
 
 for (var i = 1; i <= 10; i++) {
   database.tasks.push({
-    id: i,
+    id: uuid(),
     title: faker.commerce.productName(),
     description: faker.lorem.sentences(),
     group: '',

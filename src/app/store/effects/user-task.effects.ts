@@ -1,5 +1,3 @@
-import { UserTask } from 'src/app/store/models';
-import { Update } from '@ngrx/entity';
 import { mergeMap, catchError, map } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
@@ -7,7 +5,6 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import * as UserTaskActions from '../actions/user-task.actions';
 import { UserTaskService } from 'src/app/pages/user/profile/services';
 import { of } from 'rxjs';
-import { stringify } from '@angular/compiler/src/util';
 
 
 @Injectable()
@@ -24,10 +21,7 @@ export class UserTaskEffects {
       mergeMap(
         () => this.userTaskService.loadUserTasks()
           .pipe(
-            map( (data) => {
-              {console.log("First loaded user task title: " + stringify(data[0].title));
-              return UserTaskActions.loadUserTasksSuccess( {userTasks: data} ); }
-            } ),
+            map( (data) => UserTaskActions.loadUserTasksSuccess( {userTasks: data} )),
             catchError( error => of( UserTaskActions.loadUserTasksFailure( error ) ) )
           )
       )
@@ -42,6 +36,19 @@ export class UserTaskEffects {
         .pipe(
           map( () => UserTaskActions.updateUserTaskSuccess( data ) ),
           catchError( error => of( UserTaskActions.updateUserTaskFailure( error ) ) )
+        )
+      )
+    )
+  );
+
+  deleteUserTaskEffect = createEffect(
+    () => this.actions$.pipe(
+      ofType(UserTaskActions.deleteUserTask),
+      mergeMap(
+        (data) => this.userTaskService.deleteUserTask(data.id)
+        .pipe(
+          map( () => UserTaskActions.deleteUserTaskSuccess( data ) ),
+          catchError( error => of( UserTaskActions.deleteUserTaskFailure( error ) ) )
         )
       )
     )
