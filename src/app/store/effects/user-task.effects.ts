@@ -54,4 +54,17 @@ export class UserTaskEffects {
     )
   );
 
+  addUserTaskEffect = createEffect(
+    () => this.actions$.pipe(
+      ofType(UserTaskActions.addUserTask),
+      mergeMap(
+        (data) => this.userTaskService.addUserTask(data.userTask)
+        .pipe(
+          map( () => UserTaskActions.addUserTaskSuccess( data ) ),
+          catchError( error => of( UserTaskActions.addUserTaskFailure( error ) ) )
+        )
+      )
+    )
+  );
+
 }

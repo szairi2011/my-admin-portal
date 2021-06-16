@@ -19,12 +19,23 @@ export const loadUserTasksFailure = createAction(
   props<{ error: Error }>()
 );
 
-// Add user tasks with success & failure actions
+// Add a new user task with success & failure actions
 export const addUserTask = createAction(
   '[UserTask/API] Add UserTask',
   props<{ userTask: UserTask }>()
 );
 
+export const addUserTaskSuccess = createAction(
+  '[UserTask/API] Add UserTask Success',
+  props<{ userTask: UserTask }>()
+);
+
+export const addUserTaskFailure = createAction(
+  '[UserTask/API] Add UserTask Failure',
+  props<{ error: Error }>()
+);
+
+/*  */
 export const upsertUserTask = createAction(
   '[UserTask/API] Upsert UserTask',
   props<{ userTask: UserTask }>()

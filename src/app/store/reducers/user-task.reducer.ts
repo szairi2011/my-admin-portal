@@ -20,9 +20,36 @@ export const initialState: UserTaskState = userTaskAdapter.getInitialState({
 
 export const reducer = createReducer(
   initialState,
+
+  /* Crate a new user task */
   on(UserTaskActions.addUserTask,
-    (state, action) => userTaskAdapter.addOne(action.userTask, state)
+    (state, action) => {
+      return {
+        ... state,
+        loading: true
+      }
+    }
   ),
+
+  on(UserTaskActions.addUserTaskSuccess,
+    (state, action) => userTaskAdapter.addOne(action.userTask, {
+      ... state,
+      loading: false
+    })
+  ),
+
+  on(UserTaskActions.addUserTaskFailure,
+    (state, action) => {
+      return {
+        ... state,
+        loading:false,
+        error: action.error
+      }
+    }
+  ),
+
+  /*  */
+
   on(UserTaskActions.upsertUserTask,
     (state, action) => userTaskAdapter.upsertOne(action.userTask, state)
   ),
