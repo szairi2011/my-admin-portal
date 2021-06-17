@@ -28,6 +28,7 @@ import { UpdateUserTaskComponent } from './components/todo/crud/update-user-task
 import { UserTaskActionsMenuComponent, UserTasksComponent } from './components/todo';
 import { AddUserTaskComponent } from './components/todo/crud/add-user-task/add-user-task.component';
 import { UserTaskAddActionComponent } from './components/todo/user-task-add-action/user-task-add-action.component';
+import { SortPipe } from './pipes/user-task.sort.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { UserTaskAddActionComponent } from './components/todo/user-task-add-acti
     UserTaskActionsMenuComponent,
     UpdateUserTaskComponent,
     AddUserTaskComponent,
-    UserTaskAddActionComponent
+    UserTaskAddActionComponent,
+    SortPipe
   ],
   imports: [
     CommonModule,

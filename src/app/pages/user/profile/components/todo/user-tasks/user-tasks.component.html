@@ -16,7 +16,7 @@
           <app-user-task-actions-menu></app-user-task-actions-menu>
         </div> -->
 
-        <div class="user-task-wrapper" *ngFor="let task of filteredTasks">
+        <div class="user-task-wrapper" *ngFor="let task of filteredTasks | userTaskSort">
           <div class="inner-user-task-wrapper">
             <p [ngClass]="{'task-time': true,'task-done': task.isComplete}">{{task.time}}</p>
             <div class="task-circle"></div>

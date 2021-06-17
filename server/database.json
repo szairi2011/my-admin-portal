@@ -1,29 +1,6 @@
 {
   "tasks": [
     {
-      "id": "bae93313-da8a-4654-9448-b764fdfcb235",
-      "title": "Handcrafted Rubber Shirt 2",
-      "description": "Esse et quo. Eum facilis qui sit repellendus id reprehenderit tempora. Molestias est quo placeat. Maxime fugiat accusamus. Reprehenderit velit praesentium facilis. Reprehenderit in sapiente animi sint provident similique dolorem esse doloribus.",
-      "group": "",
-      "time": "10:34am",
-      "isComplete": true
-    },
-    {
-      "id": "78de8f26-145d-4683-8fc9-f91ec533eef9",
-      "title": "Intelligent Concrete Mouse",
-      "description": "Sunt non quibusdam sunt in quo ad provident ex explicabo. Amet magnam magnam qui consectetur enim sapiente illum autem. Cum sit quisquam est dolorem reprehenderit aut dolor. Aut id aut optio odit aut praesentium autem. Non totam fugiat nihil quod molestias. Optio repudiandae similique eaque cum eum.",
-      "group": "",
-      "time": "10:34am",
-      "isComplete": false
-    },
-    {
-      "id": "d5a0c686-6d82-434b-93ff-6e9d0af35ce8",
-      "title": "Contact HR to check next validation date ...",
-      "description": "sxqsx",
-      "time": "16:8",
-      "isComplete": false
-    },
-    {
       "id": "d08da374-173c-4ea0-a37a-6514f7adabc0",
       "title": "SGW Tunis team meeting > Discuss Glint survey ",
       "description": "Include comments where needed for eSat for instance",
@@ -35,6 +12,20 @@
       "title": "SGW Tunis team meeting > Discuss cOTC possible cancellation",
       "description": "cOTC program might be put on hold ...",
       "time": "11:30",
+      "isComplete": false
+    },
+    {
+      "id": "4feebf1f-46de-4058-aec8-44edb7c727de",
+      "title": "Interns 2021 > Offboarding students on WD",
+      "description": "",
+      "time": "11:34",
+      "isComplete": true
+    },
+    {
+      "id": "1a999063-7ee4-4fc0-8265-3e2453df946e",
+      "title": "interns 2021 > Discuss with Wahbi about the new opening ...",
+      "description": "",
+      "time": "11:52",
       "isComplete": false
     }
   ],
