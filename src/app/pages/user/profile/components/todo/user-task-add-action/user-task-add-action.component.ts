@@ -1,5 +1,5 @@
 import { MatDialog } from '@angular/material/dialog';
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AddUserTaskComponent } from '../crud';
 
 @Component({
@@ -8,8 +8,6 @@ import { AddUserTaskComponent } from '../crud';
   styleUrls: ['./user-task-add-action.component.scss']
 })
 export class UserTaskAddActionComponent implements OnInit {
-
-  @Output() userTaskFilterEvent: EventEmitter<string> = new EventEmitter<string>();
 
   constructor(private matDialog: MatDialog ) { }
 
@@ -27,10 +25,6 @@ export class UserTaskAddActionComponent implements OnInit {
     _dialogRef.afterClosed().subscribe(
       result => console.log("Creating a new user task ...")
     );
-  }
-
-  filterTasks(filterStr: string) {
-    this.userTaskFilterEvent.emit(filterStr);
   }
 
 }

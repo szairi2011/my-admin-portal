@@ -30,26 +30,15 @@ export class UserTasksComponent implements OnInit{
       .subscribe((items) => {
         this.userTasks = items;
         this.filteredTasks = items;
-        // this.filteredTasks = this.sortTasks(this.filteredTasks);
-
       });
   }
 
   filterTasks(filterStr: string) {
     console.log("Filter term: ", filterStr);
-    // filterStr = filterStr.toLowerCase();
     console.log("Lowercase Filter term: ", filterStr);
     this.filteredTasks = this.userTasks.filter(
       (item) => item.title.toLowerCase().search(filterStr.toLowerCase()) > -1
     );
-
-    // this.filteredTasks = this.sortTasks(this.filteredTasks);
   }
-
-  // sortTasks(_tasks: UserTask[]): UserTask[] {
-  //   return _tasks.sort(
-  //     (a, b) => <number>new Number(a.isComplete) - <number>new Number(b.isComplete)
-  //   );
-  // }
 
 }

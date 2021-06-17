@@ -29,6 +29,7 @@ import { UserTaskActionsMenuComponent, UserTasksComponent } from './components/t
 import { AddUserTaskComponent } from './components/todo/crud/add-user-task/add-user-task.component';
 import { UserTaskAddActionComponent } from './components/todo/user-task-add-action/user-task-add-action.component';
 import { SortPipe } from './pipes/user-task.sort.pipe';
+import { UserTasksFilterActionComponent } from './components/todo/user-tasks-filter-action/user-tasks-filter-action.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SortPipe } from './pipes/user-task.sort.pipe';
     UpdateUserTaskComponent,
     AddUserTaskComponent,
     UserTaskAddActionComponent,
-    SortPipe
+    SortPipe,
+    UserTasksFilterActionComponent
   ],
   imports: [
     CommonModule,
