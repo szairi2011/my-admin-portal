@@ -16,13 +16,13 @@
         </div>
       </button> -->
 
-      <!-- <div class="button-inert-wrapper">
+      <div class="button-inert-wrapper">
         <mat-form-field appearance="outline" class="search">
           <mat-icon matPrefix>search</mat-icon>
-          <input matInput #searchInput>
+          <input matInput #searchInput (keyup)="filterTasks($event.target.value)">
           <mat-label for="searchInput">Search</mat-label>
         </mat-form-field>
-      </div> -->
+      </div>
 
     </div>
 

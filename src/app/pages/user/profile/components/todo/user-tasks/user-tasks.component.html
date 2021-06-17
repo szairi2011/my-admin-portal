@@ -1,7 +1,7 @@
 <mat-card class="user-tasks-card">
   <mat-card-title class="user-tasks-title-wrapper">
     <p class="user-tasks-title">Tasks</p>
-    <app-user-task-add-action></app-user-task-add-action>
+    <app-user-task-add-action (userTaskFilterEvent)="filterTasks($event)"></app-user-task-add-action>
     <!-- <app-date-menu></app-date-menu> -->
   </mat-card-title>
   <mat-card-content>
@@ -16,7 +16,7 @@
           <app-user-task-actions-menu></app-user-task-actions-menu>
         </div> -->
 
-        <div class="user-task-wrapper" *ngFor="let task of (userTasks$ | async)">
+        <div class="user-task-wrapper" *ngFor="let task of filteredTasks">
           <div class="inner-user-task-wrapper">
             <p [ngClass]="{'task-time': true,'task-done': task.isComplete}">{{task.time}}</p>
             <div class="task-circle"></div>

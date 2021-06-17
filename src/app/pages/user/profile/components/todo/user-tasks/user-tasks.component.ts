@@ -14,7 +14,9 @@ import * as UserTaskActions from 'src/app/store/actions';
 })
 export class UserTasksComponent implements OnInit{
 
-  userTasks$: Observable<UserTask[]>;
+  userTasks: UserTask[] = [];
+
+  filteredTasks: UserTask[] = [];
 
   constructor(
     private store:Store<AppState>
@@ -24,9 +26,20 @@ export class UserTasksComponent implements OnInit{
   ngOnInit(): void {
     this.store.dispatch(UserTaskActions.loadUserTasks());
 
-    this.userTasks$ = this.store.select(selectAllUserTasks);
+    this.store.select(selectAllUserTasks)
+      .subscribe((items) => {
+        this.userTasks = items;
+        this.filteredTasks = items;
+      });
   }
 
-
+  filterTasks(filterStr: string) {
+    console.log("Filter term: ", filterStr);
+    // filterStr = filterStr.toLowerCase();
+    console.log("Lowercase Filter term: ", filterStr);
+    this.filteredTasks = this.userTasks.filter(
+      (item) => item.title.toLowerCase().search(filterStr.toLowerCase()) > -1
+    );
+  }
 
 }
