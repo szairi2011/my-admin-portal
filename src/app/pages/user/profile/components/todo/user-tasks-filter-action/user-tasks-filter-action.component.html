@@ -1,44 +1,6 @@
-<div class="add-card">
-  <!-- Add user card -->
-  <div class="add-content">
-    <div class="first-buttons-wrapper">
-      <!-- <button mat-flat-button color="success" class="add-button" matTooltip="Add user task" matTooltipPosition="above"
-        aria-label="Click button to add a user task" (click)="addTask()">
-        <div class="button-inert-wrapper">
-          <mat-icon>add</mat-icon>
-          <p class="button-text">Add</p>
-        </div>
-      </button> -->
-      <!-- <button mat-stroked-button color="primary" class="filters-button">
-        <div class="button-inert-wrapper">
-          <mat-icon>filter_list</mat-icon>
-          <p class="button-text">filters</p>
-        </div>
-      </button> -->
-
-      <div class="button-inert-wrapper">
-        <mat-form-field appearance="outline" class="search">
-          <mat-icon matPrefix>search</mat-icon>
-          <input matInput #searchInput (keyup)="filterTasks($event.target.value)">
-          <mat-label for="searchInput">Search</mat-label>
-        </mat-form-field>
-      </div>
-
-    </div>
-
-    <!-- <div class="second-buttons-wrapper">
-      <button mat-stroked-button color="warn" class="download-button"
-          matTooltip="Download searched users"
-          aria-label="Button to download the list of users we've searched for">
-        <div class="button-inert-wrapper">
-          <mat-icon>get_app</mat-icon>
-          <p class="button-text">download</p>
-        </div>
-      </button>
-
-    </div> -->
-  </div>
-
-  <!-- List users card -->
-
+<div class="search" [ngClass]="{'show-search-input': isShowInput}">
+  <mat-icon class="search-icon" [ngClass]="{'open-search': isShowInput}" (click)=toggleInput()>search</mat-icon>
+  <input *ngIf="isShowInput" class="search-input" matTooltip="Filter a user task by title content"
+    matTooltipPosition="above"
+    placeholder="Enter search ..." (keyup)="filterTasks($event.target.value)">
 </div>

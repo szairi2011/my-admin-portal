@@ -1,50 +1,63 @@
-@import 'src/app/styles/colors';
-// @import 'src/app/styles/font';
-@import 'src/app/styles/variables';
+@import "src/app/styles/colors";
+@import "src/app/styles/font";
+@import "src/app/styles/variables";
 
-.add-card {
-  height: 100%;
-  // margin-top: 24px;
-}
-
-.add-content {
+.search {
   display: flex;
-  justify-content: space-between;
-}
-
-.first-buttons-wrapper {
-  display: flex;
-}
-
-.add-button {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 6px 16px;
-}
-
-.mat-success {
-  background-color: #31c2a0;
-  border-color: #31c2a0!important;
-  color: #fff;
-}
-
-.mat-flat-button, .mat-raised-button {
-  letter-spacing: .02857em;
-  text-transform: uppercase;
-}
-
-.button-inert-wrapper {
+  height: 40px;
+  border-radius: 10px;
+  box-sizing: border-box;
   align-items: center;
-  display: flex;
+  width: 36px;
+  padding-left: 4px;
+  cursor: pointer;
+  flex-direction: row-reverse;
+
+  &:hover {
+    background-color: $black-08;
+    // background-color: $green;
+  }
+
+  @media (max-width: $small) {
+    display: none;
+  }
 }
 
-.material-icons {
-  font-size: 24px;
+.show-search-input {
+  animation: 0.3s open_search;
+  width: 200px;
+  padding-left: 22.4px;
+  background-color: $black-08;
 }
 
-.button-text {
-  margin: 0 0 0 8px;
-  font-size: 16px;
-  color: #fff; // Included here as mat-card-itle has overriden property
+.search-input {
+  color: $green;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 22px;
+  font-size: $fs-regular;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 36px;
+  width: 100%;
+
+  &::-webkit-input-placeholder {
+    color: $green;
+  }
 }
+
+.search-icon {
+  padding: 0 7px 3px 0;
+  // color: $white-35;
+  color: $green;
+}
+
+.open-search {
+  animation: 0.3s move_search-icon;
+  padding-right: 16px;
+  padding-left: 4px;
+}
+
+@keyframes open_search { from { width: 36px; } to { width: 200px; }  }
+@keyframes open_search_large { from { width: 36px; } to { width: 150px; }  }
+@keyframes move_search-icon { from { padding: 0 7px 3px 0; } to { padding-right: 16px; }  }

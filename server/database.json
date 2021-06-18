@@ -5,14 +5,14 @@
       "title": "SGW Tunis team meeting > Discuss Glint survey ",
       "description": "Include comments where needed for eSat for instance",
       "time": "11:24",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "a7eac776-fbe0-4cbb-bdc6-62c2a66b21ba",
       "title": "SGW Tunis team meeting > Discuss cOTC possible cancellation",
       "description": "cOTC program might be put on hold ...",
       "time": "11:30",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "4feebf1f-46de-4058-aec8-44edb7c727de",
@@ -26,7 +26,14 @@
       "title": "interns 2021 > Discuss with Wahbi about the new opening ...",
       "description": "",
       "time": "11:52",
-      "isComplete": false
+      "isComplete": true
+    },
+    {
+      "id": "f3906942-5b1c-4c35-89ff-ce645ad27dac",
+      "title": "SGW inprovements meeting > Discuss SLTP next steps with Sandeep ...",
+      "description": "",
+      "time": "14:10",
+      "isComplete": true
     }
   ],
   "categories": [

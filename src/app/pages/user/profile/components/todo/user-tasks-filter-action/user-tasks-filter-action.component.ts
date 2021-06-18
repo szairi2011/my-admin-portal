@@ -9,6 +9,8 @@ export class UserTasksFilterActionComponent implements OnInit {
 
   @Output() userTaskFilterEvent: EventEmitter<string> = new EventEmitter<string>();
 
+  isShowInput: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -16,6 +18,10 @@ export class UserTasksFilterActionComponent implements OnInit {
 
   filterTasks(filterStr: string) {
     this.userTaskFilterEvent.emit(filterStr);
+  }
+
+  toggleInput() {
+    this.isShowInput = !this.isShowInput;
   }
 
 }
