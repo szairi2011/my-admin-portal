@@ -4,9 +4,9 @@ var uuid = require("uuid");
 
 var database = {
   tasks: [],
+  users: [],
   categories: [],
   carts: [],
-  users: [],
 };
 
 for (var i = 1; i <= 10; i++) {
@@ -18,6 +18,28 @@ for (var i = 1; i <= 10; i++) {
     time: '10:34am',
     isComplete: faker.random.boolean()
   });
+}
+
+for (var i = 1; i <= 10; i++) {
+  let user = {
+    id: uuid(),
+    firstname: faker.name.firstName(),
+    lastname: faker.name.lastName(),
+    password: faker.internet.password(),
+    username: '',
+    email: '',
+    company: 'FIS',
+    role: faker.name.jobTitle(),
+    skills: [
+        faker.name.jobArea(),
+        faker.name.jobArea(),
+        faker.name.jobArea(),
+        faker.name.jobArea()
+    ]
+  };
+  user.username = user.firstname.toLowerCase() + '.' + user.lastname.toLowerCase() + '@' + 'fisglobal' + '.com';
+  user.email = user.username;
+  database.users.push(user)
 }
 
 for (var i = 1; i <= 50; i++) {
@@ -38,20 +60,6 @@ database.carts.push({
   id: 2,
   userid: 1,
   products: [],
-});
-
-database.users.push({
-  id: "1",
-  username: "admin",
-  email: "admin@admin.com",
-  isadmin: true,
-});
-
-database.users.push({
-  id: "2",
-  username: "user",
-  email: "user@user.com",
-  isadmin: false,
 });
 
 console.log(JSON.stringify(database));

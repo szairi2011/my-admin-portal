@@ -14,7 +14,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
-
+import { MatChipsModule } from '@angular/material/chips';
 
 import { ProfilePageComponent } from './containers/profile-page';
 import { StoreModule } from '@ngrx/store';
@@ -22,7 +22,6 @@ import * as fromUserTask from '../../../store/reducers/user-task.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { UserTaskEffects } from '../../../store/effects/user-task.effects';
 
-import { UserTaskService } from './services/user-task.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateUserTaskComponent } from './components/todo/crud/update-user-task/update-user-task.component';
 import { UserTaskActionsMenuComponent, UserTasksComponent } from './components/todo';
@@ -30,6 +29,12 @@ import { AddUserTaskComponent } from './components/todo/crud/add-user-task/add-u
 import { UserTaskAddActionComponent } from './components/todo/user-task-add-action/user-task-add-action.component';
 import { SortPipe } from './pipes/user-task.sort.pipe';
 import { UserTasksFilterActionComponent } from './components/todo/user-tasks-filter-action/user-tasks-filter-action.component';
+import { UserInfoComponent } from './components/info/user-info/user-info.component';
+
+import { UserTaskService } from './services/user-task.service';
+import { UserInfoService } from './services';
+import * as fromUserInfo from '../../../store/reducers/user-info.reducer';
+import { UserInfoEffects } from '../../../store/effects/user-info.effects';
 
 @NgModule({
   declarations: [
@@ -40,7 +45,8 @@ import { UserTasksFilterActionComponent } from './components/todo/user-tasks-fil
     AddUserTaskComponent,
     UserTaskAddActionComponent,
     SortPipe,
-    UserTasksFilterActionComponent
+    UserTasksFilterActionComponent,
+    UserInfoComponent
   ],
   imports: [
     CommonModule,
@@ -58,11 +64,14 @@ import { UserTasksFilterActionComponent } from './components/todo/user-tasks-fil
     MatInputModule,
     MatButtonModule,
     MatTooltipModule,
-    StoreModule.forFeature(fromUserTask.userTasksFeatureKey, fromUserTask.reducer),
-    EffectsModule.forFeature([UserTaskEffects])
+    MatChipsModule,
+    StoreModule.forFeature(fromUserTask.userTasksFeatureKey, fromUserTask.userTaskReducer),
+    EffectsModule.forFeature([UserTaskEffects, UserInfoEffects]),
+    StoreModule.forFeature(fromUserInfo.userInfoFeatureKey, fromUserInfo.userInfoReducer)
   ],
   providers: [
-    UserTaskService
+    UserTaskService,
+    UserInfoService
   ]
 })
 export class ProfileModule { }

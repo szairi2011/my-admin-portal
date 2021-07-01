@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
-import { User } from './../../../../pages/auth/models/user';
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { routes } from 'src/app/consts';
+import { UserInfo } from 'src/app/store/models';
 
 @Component({
   selector: 'app-user',
@@ -10,7 +10,7 @@ import { routes } from 'src/app/consts';
 })
 export class UserComponent implements OnInit {
 
-  @Input() user: User;
+  @Input() user: UserInfo;
 
   @Output() signOut: EventEmitter<void> = new EventEmitter();
 

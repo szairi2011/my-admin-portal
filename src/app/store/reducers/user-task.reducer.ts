@@ -18,7 +18,7 @@ export const initialState: UserTaskState = userTaskAdapter.getInitialState({
 });
 
 
-export const reducer = createReducer(
+export const userTaskReducer = createReducer(
   initialState,
 
   /* Crate a new user task */

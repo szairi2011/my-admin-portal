@@ -1,9 +1,13 @@
+import { Store } from '@ngrx/store';
+import { UserInfo } from 'src/app/store/models';
 import { routes } from './../../../../consts/routes';
 import { Observable } from 'rxjs';
-import { Email, User } from './../../../../pages/auth/models';
+import { Email } from './../../../../pages/auth/models';
 import { EmailService, AuthService } from './../../../../pages/auth/services';
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppState } from 'src/app/store';
+import { selectLoggedInUserInfo } from 'src/app/store/selectors';
 
 @Component({
   selector: 'app-header',
@@ -18,18 +22,19 @@ export class HeaderComponent implements OnInit {
 
   emails$: Observable<Email[]>;
 
-  user$: Observable<User>;
+  user$: Observable<UserInfo>;
 
   routes = routes;
 
   constructor(
     private emailService: EmailService,
     private authService: AuthService,
-    private router: Router) { }
+    private router: Router,
+    private store: Store<AppState>) { }
 
   ngOnInit(): void {
     this.emails$ = this.emailService.loadEmails();
-    this.user$ = this.authService.getLoggedInUser()
+    this.user$ = this.store.select(selectLoggedInUserInfo);
   }
 
   toggleMenu() {

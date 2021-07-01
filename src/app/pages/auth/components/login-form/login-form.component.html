@@ -1,4 +1,4 @@
-<form class="form" [formGroup]="loginForm" (ngSubmit)="authenticate($event)">
+<form class="form" [formGroup]="loginForm" (ngSubmit)="authenticate()">
   <mat-form-field class="form__input">
     <input matInput placeholder="Email Address" type="email" formControlName="username">
   </mat-form-field>

@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { LoginFormComponent, SignupFormComponent } from './components';
 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { LoginFormComponent, SignupFormComponent } from './components';
   imports: [
     CommonModule,
     AuthRoutingModule,
+    HttpClientModule,
     MatTabsModule,
     ReactiveFormsModule,
     FormsModule,
