@@ -1,84 +1,39 @@
 {
   "tasks": [
     {
-      "id": "5db70c84-4ded-4cb4-9ca3-67dc7ae2a99f",
-      "title": "Rustic Fresh Hat",
-      "description": "Et fuga sequi facere et delectus cum. Ratione cum voluptatem.",
-      "group": "",
-      "time": "10:34am",
+      "id": "0c53be72-b34c-4271-b01d-d61653b71dd1",
+      "title": "SGW Tunis weekly meeting > Survey results follow up",
+      "description": "Check Glint results on Workday and follow up with the team",
+      "time": "9:59",
       "isComplete": true
     },
     {
-      "id": "26d5985c-2262-46ce-9ed9-45dfcde610bd",
-      "title": "Practical Cotton Table",
-      "description": "Perspiciatis a sit dolores sequi hic et distinctio. Eius nostrum quis molestiae possimus. Dolores qui dolor qui. Enim nemo qui incidunt ratione tenetur aliquid. Rerum id enim eos ut eligendi.",
-      "group": "",
-      "time": "10:34am",
+      "id": "e3d7bed3-4c03-42ab-b419-a668199455bf",
+      "title": "SGW team > Set 9 box talent assessment",
+      "description": "Perform talent assessment and succession plan for SGW team members",
+      "time": "10:6",
       "isComplete": false
     },
     {
-      "id": "7c718802-1df4-4287-938e-7e37ec84be87",
-      "title": "Intelligent Fresh Chicken",
-      "description": "Necessitatibus consectetur ducimus aperiam nihil minus repellendus expedita deleniti. Voluptatum repellendus consequatur pariatur rerum animi officiis soluta voluptatem nostrum.",
-      "group": "",
-      "time": "10:34am",
+      "id": "184e5944-2503-4f5e-8b16-9e71b08e95f9",
+      "title": "Sameh > Set 9 box talent assessment ...",
+      "description": "",
+      "time": "10:7",
+      "isComplete": false
+    },
+    {
+      "id": "68f74021-9538-463d-b173-339cff33a1f5",
+      "title": "Home > Father spendings ...",
+      "description": "180 = 100 + 42 + 38 => Include to micro finance worksheet ...\n",
+      "time": "10:14",
       "isComplete": true
     },
     {
-      "id": "96509ab4-3a2d-4812-899d-bfd7bdf26b48",
-      "title": "Unbranded Metal Table",
-      "description": "Ut nihil et nesciunt fugiat explicabo tempora et unde repellat. Earum recusandae et quod. In magni tempore dolor veritatis temporibus. Nisi aut magnam et nulla neque qui fugiat sunt. Ut ut ut voluptate modi laborum.",
-      "group": "",
-      "time": "10:34am",
+      "id": "138137e7-88a1-4363-95cd-aad0f1b219bb",
+      "title": "Glint survey > Take improvement actions",
+      "description": "The team is asking for more rcognition -- like Bravo award ... ",
+      "time": "7:3",
       "isComplete": false
-    },
-    {
-      "id": "7d2d2eed-ba75-4f75-8d97-4f1572900adb",
-      "title": "Sleek Fresh Shirt",
-      "description": "Esse sint autem cupiditate et. Aut dolorem voluptas et id unde at. Aut odit hic culpa. Quasi fugiat quia voluptatem quidem dolor excepturi nobis quae sint. Molestiae incidunt itaque optio est quis et aspernatur eius reiciendis.",
-      "group": "",
-      "time": "10:34am",
-      "isComplete": false
-    },
-    {
-      "id": "1b33bda0-cdb1-421a-8dd2-8a6cbe62218e",
-      "title": "Small Frozen Ball",
-      "description": "Sequi tempore voluptatum dolore exercitationem atque. Minus iste consectetur ut eos quis et beatae quidem. Beatae natus alias dicta quisquam et. Iure numquam reprehenderit iste natus repudiandae sequi facilis.",
-      "group": "",
-      "time": "10:34am",
-      "isComplete": true
-    },
-    {
-      "id": "4de1d731-d583-436a-83b9-2e110c10f439",
-      "title": "Refined Cotton Salad",
-      "description": "Deserunt est quia aliquam enim numquam. Tempore inventore minus quod vel aliquid.",
-      "group": "",
-      "time": "10:34am",
-      "isComplete": false
-    },
-    {
-      "id": "b09fd985-17ef-44ca-80b6-1f7ae292ed72",
-      "title": "Incredible Concrete Computer",
-      "description": "Quia ipsa dolorem aut est et nostrum. Autem aut perspiciatis sunt veritatis exercitationem qui eos porro molestias. Alias dolor voluptas consequatur ut ut omnis temporibus. Et velit et est. Voluptas tempora voluptatibus amet in quia sequi et inventore est. Repellat id sunt.",
-      "group": "",
-      "time": "10:34am",
-      "isComplete": false
-    },
-    {
-      "id": "0574a530-562e-4829-9014-45017935fce2",
-      "title": "Sleek Metal Tuna",
-      "description": "Autem nobis sit. Error commodi ut dolorem voluptatem mollitia mollitia accusamus. Sint consequatur rerum voluptates. Non ut maiores. Unde sint impedit aut tenetur ullam nulla eos. Deleniti similique laborum adipisci accusamus.",
-      "group": "",
-      "time": "10:34am",
-      "isComplete": false
-    },
-    {
-      "id": "da87cac1-6c40-463d-920c-54572b821186",
-      "title": "Small Rubber Towels",
-      "description": "Dolores quam libero perspiciatis vel ut velit. Est ut eligendi. Fugit debitis qui corrupti error esse illum veniam enim aliquam.",
-      "group": "",
-      "time": "10:34am",
-      "isComplete": true
     }
   ],
   "users": [
@@ -91,7 +46,12 @@
       "email": "anika.ortiz@fisglobal.com",
       "company": "FIS",
       "role": "International Assurance Orchestrator",
-      "skills": ["Brand", "Usability", "Integration", "Brand"]
+      "skills": [
+        "Brand",
+        "Usability",
+        "Integration",
+        "Brand"
+      ]
     },
     {
       "id": "226afcb0-d7b5-42f3-a282-213fb4d096fc",
@@ -102,7 +62,12 @@
       "email": "verlie.skiles@fisglobal.com",
       "company": "FIS",
       "role": "Regional Division Orchestrator",
-      "skills": ["Communications", "Markets", "Marketing", "Quality"]
+      "skills": [
+        "Communications",
+        "Markets",
+        "Marketing",
+        "Quality"
+      ]
     },
     {
       "id": "0f0c4782-c26e-4417-bc7a-52657569229d",
@@ -113,7 +78,12 @@
       "email": "preston.prosacco@fisglobal.com",
       "company": "FIS",
       "role": "Regional Response Representative",
-      "skills": ["Creative", "Solutions", "Functionality", "Functionality"]
+      "skills": [
+        "Creative",
+        "Solutions",
+        "Functionality",
+        "Functionality"
+      ]
     },
     {
       "id": "8c129f2e-5510-4eec-903d-3a970c3c2efc",
@@ -124,7 +94,12 @@
       "email": "jana.bednar@fisglobal.com",
       "company": "FIS",
       "role": "Product Quality Officer",
-      "skills": ["Web", "Identity", "Infrastructure", "Factors"]
+      "skills": [
+        "Web",
+        "Identity",
+        "Infrastructure",
+        "Factors"
+      ]
     },
     {
       "id": "89f3a067-c8c6-488a-b2b3-a489274d93aa",
@@ -135,7 +110,12 @@
       "email": "karlee.bartell@fisglobal.com",
       "company": "FIS",
       "role": "Human Accounts Engineer",
-      "skills": ["Branding", "Branding", "Integration", "Applications"]
+      "skills": [
+        "Branding",
+        "Branding",
+        "Integration",
+        "Applications"
+      ]
     },
     {
       "id": "c00a2e20-23ab-42a0-94e2-35d9c46b3421",
@@ -146,7 +126,12 @@
       "email": "emilio.turcotte@fisglobal.com",
       "company": "FIS",
       "role": "Senior Infrastructure Associate",
-      "skills": ["Tactics", "Paradigm", "Functionality", "Marketing"]
+      "skills": [
+        "Tactics",
+        "Paradigm",
+        "Functionality",
+        "Marketing"
+      ]
     },
     {
       "id": "41efb2b3-6580-42fd-8ca2-c81b89ad0cd7",
@@ -157,7 +142,12 @@
       "email": "mina.graham@fisglobal.com",
       "company": "FIS",
       "role": "Dynamic Accountability Manager",
-      "skills": ["Metrics", "Data", "Division", "Functionality"]
+      "skills": [
+        "Metrics",
+        "Data",
+        "Division",
+        "Functionality"
+      ]
     },
     {
       "id": "15be20c1-852b-4db2-b82e-317849c3a416",
@@ -168,7 +158,12 @@
       "email": "rosemarie.mckenzie@fisglobal.com",
       "company": "FIS",
       "role": "Future Mobility Director",
-      "skills": ["Division", "Paradigm", "Brand", "Research"]
+      "skills": [
+        "Division",
+        "Paradigm",
+        "Brand",
+        "Research"
+      ]
     },
     {
       "id": "90763068-07c0-49e5-b6b8-93969a12b6fc",
@@ -179,7 +174,12 @@
       "email": "kaci.kunde@fisglobal.com",
       "company": "FIS",
       "role": "Dynamic Identity Facilitator",
-      "skills": ["Integration", "Accountability", "Group", "Markets"]
+      "skills": [
+        "Integration",
+        "Accountability",
+        "Group",
+        "Markets"
+      ]
     },
     {
       "id": "bff79c33-de91-4daf-8b61-4aa0a083b31a",
@@ -190,7 +190,12 @@
       "email": "flossie.o'keefe@fisglobal.com",
       "company": "FIS",
       "role": "District Paradigm Developer",
-      "skills": ["Branding", "Tactics", "Factors", "Brand"]
+      "skills": [
+        "Branding",
+        "Tactics",
+        "Factors",
+        "Brand"
+      ]
     }
   ],
   "categories": [
@@ -204,7 +209,11 @@
       "name": "laudantium",
       "description": "Dolorum et veritatis delectus ea quos nemo."
     },
-    { "id": 3, "name": "et", "description": "Dolor distinctio doloribus." },
+    {
+      "id": 3,
+      "name": "et",
+      "description": "Dolor distinctio doloribus."
+    },
     {
       "id": 4,
       "name": "tenetur",
@@ -225,7 +234,11 @@
       "name": "aut",
       "description": "Doloremque labore inventore officiis et perspiciatis blanditiis."
     },
-    { "id": 8, "name": "unde", "description": "Dolor minima itaque." },
+    {
+      "id": 8,
+      "name": "unde",
+      "description": "Dolor minima itaque."
+    },
     {
       "id": 9,
       "name": "doloremque",
@@ -266,7 +279,11 @@
       "name": "incidunt",
       "description": "Molestias est sunt rerum."
     },
-    { "id": 17, "name": "ut", "description": "Et perferendis velit a." },
+    {
+      "id": 17,
+      "name": "ut",
+      "description": "Et perferendis velit a."
+    },
     {
       "id": 18,
       "name": "officiis",
@@ -322,7 +339,11 @@
       "name": "occaecati",
       "description": "Unde officiis atque commodi nostrum magni perferendis non."
     },
-    { "id": 29, "name": "fuga", "description": "Culpa nihil laborum est." },
+    {
+      "id": 29,
+      "name": "fuga",
+      "description": "Culpa nihil laborum est."
+    },
     {
       "id": 30,
       "name": "similique",
@@ -353,7 +374,11 @@
       "name": "expedita",
       "description": "Quam voluptatem molestiae saepe iure."
     },
-    { "id": 36, "name": "eligendi", "description": "Aut et magnam." },
+    {
+      "id": 36,
+      "name": "eligendi",
+      "description": "Aut et magnam."
+    },
     {
       "id": 37,
       "name": "ducimus",
@@ -426,7 +451,15 @@
     }
   ],
   "carts": [
-    { "id": 1, "userid": 2, "products": [] },
-    { "id": 2, "userid": 1, "products": [] }
+    {
+      "id": 1,
+      "userid": 2,
+      "products": []
+    },
+    {
+      "id": 2,
+      "userid": 1,
+      "products": []
+    }
   ]
 }
