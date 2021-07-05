@@ -1,3 +1,4 @@
+import { UserEditPageComponent } from './edit/containers/user-edit-page/user-edit-page.component';
 import { UserListPageComponent } from './list/containers/user-list-page';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -25,6 +26,12 @@ const routes: Routes = [
     pathMatch: 'full',
     component: ProfilePageComponent,
     data: { breadcrumb: 'profile'}
+  },
+  {
+    path: 'edit',
+    pathMatch: 'full',
+    component: UserEditPageComponent,
+    data: { breadcrumb: 'Edit user'}
   }
 ];
 

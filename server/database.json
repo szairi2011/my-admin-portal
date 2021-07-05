@@ -34,6 +34,34 @@
       "description": "The team is asking for more rcognition -- like Bravo award ... ",
       "time": "7:3",
       "isComplete": false
+    },
+    {
+      "id": "faa1139e-2c03-4880-b6d1-09a70c0ce4d6",
+      "title": "SGW Titans team > New project allocation ",
+      "description": "Speak to Houssem about the progress on this ...",
+      "time": "8:28",
+      "isComplete": false
+    },
+    {
+      "id": "9f9328e5-62cb-4459-80fc-a85c252f7098",
+      "title": "MSPC team > Offboard Oumeima from UBIX account",
+      "description": "Follow the process to offboard Oumeima. Looks like it starts by raising a ServiceNow ticket ...",
+      "time": "8:31",
+      "isComplete": false
+    },
+    {
+      "id": "e9f9adf4-b159-404a-a199-ab50e05d6844",
+      "title": "Change Delivery team > Schedule Q2 Connect meeting with Sameh",
+      "description": "Schedule Q2 Connect meeting the week starting July 5th ...",
+      "time": "8:56",
+      "isComplete": false
+    },
+    {
+      "id": "971ca38e-1386-4601-9af2-b0db53ccf756",
+      "title": "Transfer Ghada ElFekhih to Wahbi's team",
+      "description": "",
+      "time": "9:4",
+      "isComplete": true
     }
   ],
   "users": [
