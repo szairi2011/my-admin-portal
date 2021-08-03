@@ -1,15 +1,37 @@
+import { RouterModule } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCardModule } from '@angular/material/card';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserEditPageComponent } from './containers/user-edit-page/user-edit-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { EditNavBarComponent } from './components/edit-nav-bar/edit-nav-bar.component';
+import { EditUserFormPartLoaderComponent } from './components/edit-user-form-part-loader/edit-user-form-part-loader.component';
+import { EditPartLoaderDirective } from './directives/edit-part-loader.directive';
+import { EditUserService } from './services/edit-user.service';
+import { EditUserAccountComponent } from './components/form-parts';
 
 
 
 @NgModule({
-  declarations: [UserEditPageComponent],
+  declarations: [
+    UserEditPageComponent,
+    EditNavBarComponent,
+    EditUserFormPartLoaderComponent,
+    EditPartLoaderDirective,
+    EditUserAccountComponent,
+  ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    MatCardModule,
+    MatTabsModule,
+    MatIconModule,
+    RouterModule
+  ],
+  providers: [
+    EditUserService
   ]
 })
 export class EditUserModule { }

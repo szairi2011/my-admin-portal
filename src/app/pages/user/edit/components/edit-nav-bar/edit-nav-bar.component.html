@@ -1,0 +1,18 @@
+<mat-card class="edit-user-nav-card">
+  <mat-card-content>
+    <mat-tab-group (selectedTabChange)="onTabChange($event)">
+      <mat-tab label="Label 1">Tab-1 content ...</mat-tab>
+      <mat-tab label="Label 2">Tab-2 content ...</mat-tab>
+      <mat-tab label="Label 3">Tab-3 content ...</mat-tab>
+      <mat-tab label="Label 4">Tab-4 content ...</mat-tab>
+    </mat-tab-group>
+    <!-- <nav mat-tab-nav-bar>
+      <a mat-tab-link
+      routerLink="/user/list"
+      routerLinkActive #rla="routerLinkActive"
+      [active]="rla.isActive">
+     Tab Label-1
+    </a>
+    </nav> -->
+  </mat-card-content>
+</mat-card>
