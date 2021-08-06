@@ -36,39 +36,88 @@
       "isComplete": false
     },
     {
-      "id": "faa1139e-2c03-4880-b6d1-09a70c0ce4d6",
-      "title": "SGW Titans team > New project allocation ",
-      "description": "Speak to Houssem about the progress on this ...",
-      "time": "8:28",
-      "isComplete": false
-    },
-    {
-      "id": "9f9328e5-62cb-4459-80fc-a85c252f7098",
-      "title": "MSPC team > Offboard Oumeima from UBIX account",
-      "description": "Follow the process to offboard Oumeima. Looks like it starts by raising a ServiceNow ticket ...",
-      "time": "8:31",
-      "isComplete": false
-    },
-    {
-      "id": "e9f9adf4-b159-404a-a199-ab50e05d6844",
-      "title": "Change Delivery team > Schedule Q2 Connect meeting with Sameh",
-      "description": "Schedule Q2 Connect meeting the week starting July 5th ...",
-      "time": "8:56",
-      "isComplete": false
-    },
-    {
-      "id": "971ca38e-1386-4601-9af2-b0db53ccf756",
-      "title": "Transfer Ghada ElFekhih to Wahbi's team",
+      "id": "f95397ac-a2e5-4f08-965c-1a006ed83229",
+      "title": "Send email to Ramla about MSPC ADP position",
       "description": "",
-      "time": "9:4",
+      "time": "11:52",
       "isComplete": true
     },
     {
-      "id": "26c97026-cdfa-4a9e-8350-8889bc41b5bf",
-      "title": "Interns 2021 > Sign Yasmine's pfe report",
+      "id": "3fb0bdb5-7d4c-4dac-b131-da0bebf8e18f",
+      "title": "Send email about the interns offboarding and notify offboarding team + Ramla + Jihen",
       "description": "",
-      "time": "12:3",
+      "time": "11:52",
       "isComplete": true
+    },
+    {
+      "id": "a5b1753e-e5f1-42f9-b617-9de70905d313",
+      "title": "Set a meeting with the team about FISCD backoffice move/opportunities ",
+      "description": "",
+      "time": "11:52",
+      "isComplete": true
+    },
+    {
+      "id": "b7ebab0b-f4a7-40b6-9ea8-c8a96525f595",
+      "title": "Envoyer facture pour la piscine au CCE",
+      "description": "",
+      "time": "11:52",
+      "isComplete": true
+    },
+    {
+      "id": "6db0cd34-fc4a-4cd9-9492-c5e64e9ddbd5",
+      "title": "Imen Touaibi :: New joiner curriculum is late",
+      "description": "- Imen Touaibi :: New joiner curriculum is the latest amongst all the joiners. So, we need to accelerate.",
+      "time": "11:54",
+      "isComplete": false
+    },
+    {
+      "id": "ae09a3a0-101b-4695-84aa-cd1b67e52d1b",
+      "title": "COVID-19 Framework :: Introduce to the team",
+      "description": "COVID-19 Framework :: Introduce to the team given the importance of the topic",
+      "time": "11:54",
+      "isComplete": false
+    },
+    {
+      "id": "f0ec76f1-cb58-4788-bbd9-7c6f6ea98b6a",
+      "title": "Send Retention bonus docs to compensation as per email",
+      "description": "Now that a signed copy of the retention bonus agreement is received from ll TMs, we need to send them by email as outlined by Kais. We are yet to double check few details with Jihen ...",
+      "time": "11:56",
+      "isComplete": false
+    },
+    {
+      "id": "cee88cd3-112c-433e-8cc6-c78547d1c3fd",
+      "title": "Recruitment -- MSPC position find 2 resources",
+      "description": "Looking for 1 ADP and 1 senior position with UBIX knowledge, i.e. 2 in total ...",
+      "time": "11:58",
+      "isComplete": false
+    },
+    {
+      "id": "cc07dedc-5876-4b4c-b56c-db00d7f5cbd8",
+      "title": "Change Workspace profile for Sameh to Home",
+      "description": "",
+      "time": "11:58",
+      "isComplete": false
+    },
+    {
+      "id": "5c273460-4ce8-46b2-8496-b976e39e5ea2",
+      "title": "Q2 Connect --> Finalize with the team members",
+      "description": "Discuss post Q2 Connect ...",
+      "time": "11:59",
+      "isComplete": false
+    },
+    {
+      "id": "bb8d658f-1efa-41f8-9797-cc64133bc227",
+      "title": "Discuss with Sameh about the new Edition of the PMP content",
+      "description": "",
+      "time": "11:59",
+      "isComplete": false
+    },
+    {
+      "id": "ad059898-7dd9-41c4-aadf-a479b4634963",
+      "title": "Discuss SGW SA automation targets ...",
+      "description": "Discuss SGW SA automation targets and plan with Emira/Riadh :: Schedule a meeting to discuss. Another follow up will be required to finalize",
+      "time": "12:0",
+      "isComplete": false
     }
   ],
   "users": [
