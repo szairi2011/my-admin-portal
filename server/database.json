@@ -118,6 +118,34 @@
       "description": "Discuss SGW SA automation targets and plan with Emira/Riadh :: Schedule a meeting to discuss. Another follow up will be required to finalize",
       "time": "12:0",
       "isComplete": false
+    },
+    {
+      "id": "88e18816-1549-4df4-a846-492698e6602e",
+      "title": "Move to FIS CD backoffice :: Discuss with the team",
+      "description": "If not enough volunteers for the 2 Dev + 1 QA positions, the selection rules would be about the extent of knowledge in SGW. The rule will announced to the team few days in advance ...",
+      "time": "11:55",
+      "isComplete": false
+    },
+    {
+      "id": "060a3e46-52b3-4265-a973-3494be2eb31a",
+      "title": "RegU item to be completed",
+      "description": "Check email - A RISC REGU item needs to be addressed ...",
+      "time": "8:55",
+      "isComplete": false
+    },
+    {
+      "id": "8daf02f5-642d-40fa-959f-7dc407af14b3",
+      "title": "Emira :: Reason to refuse to sign the training certification agreement",
+      "description": "Check email from Houssem subject: \"Engagement certification test manager\" ... An additional point was raised by Amani that no engagement is required for FIS staff tenure older than 3 years; a verifier avec Jihen ...",
+      "time": "10:37",
+      "isComplete": false
+    },
+    {
+      "id": "65307858-cbf1-439d-8c51-6be2ae95c244",
+      "title": "PSM certification :: Training pour Zied",
+      "description": "Check new dates for the training with Jihen -> Follow up on the email that has been sent to Jihen :: Subject: Certified trainings",
+      "time": "11:9",
+      "isComplete": false
     }
   ],
   "users": [

@@ -9,3 +9,14 @@
 .nav-items-group {
   padding: 8px;
 }
+
+.edit-user-tab-icon {
+  padding-right: 10px;
+  transform: scale(.9);
+}
+
+.remove-border-bottom ::ng-deep .mat-tab-header {
+  border-bottom: none;
+}
+
+

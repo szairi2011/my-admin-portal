@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, Input, ComponentFactoryResolver } from '@angular/core';
+import { EditUserEvent } from './../../models/edit-user-event';
+import { Component, OnInit, ViewChild, Input, ComponentFactoryResolver, AfterViewInit } from '@angular/core';
 import { EditPartLoaderDirective } from '../../directives';
 import { FormPartItem, IEditFormPartComponent } from '../../models';
 import { EditUserService } from '../../services';
@@ -26,6 +27,7 @@ export class EditUserFormPartLoaderComponent implements OnInit {
   }
 
   loadComponent() {
+    console.log("[EditUserFormPartLoader] Loading / Reloading form part for idx: ", this.editFormPartIdx);
     const formPartItem = this.editUserService.loadFormPart(this.editFormPartIdx);
 
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(formPartItem.component);
@@ -35,6 +37,11 @@ export class EditUserFormPartLoaderComponent implements OnInit {
 
     const componentRef = viewContainerRef.createComponent<IEditFormPartComponent>(componentFactory);
     componentRef.instance.data = formPartItem.data;
+  }
+
+  handleTabChange(_event: EditUserEvent) {
+    this.editFormPartIdx = _event.formPartIdx;
+    this.loadComponent();
   }
 
 }

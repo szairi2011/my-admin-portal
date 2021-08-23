@@ -1,6 +1,7 @@
-import { EditUserAccountComponent } from './../components/form-parts/edit-user-account/edit-user-account.component';
+
 import { Injectable } from '@angular/core';
 import { FormPartItem } from '../models';
+import { EditUserAccountComponent, EditUserProfileComponent } from '../components/form-parts';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,11 @@ export class EditUserService {
     this.formParts = [
       {
         component: EditUserAccountComponent,
-        data: 'Hello user ...'
+        data: 'Data for edit user account form part'
+      },
+      {
+        component: EditUserProfileComponent,
+        data: 'Date for edit user profile form part'
       }
     ];
   }

@@ -1,4 +1,8 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { EditUserEvent } from './../../models/edit-user-event';
+import { Component, OnInit, EventEmitter, AfterViewInit, ViewChild } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { EditUserFormPartLoaderComponent } from '../../components/edit-user-form-part-loader/edit-user-form-part-loader.component';
 
 @Component({
   selector: 'app-user-edit-page',
@@ -7,15 +11,21 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 })
 export class UserEditPageComponent implements OnInit {
 
-  formPartIdx: number;
+  // Defaults to first edit user tab
+  formPartIdx$: Observable<number> = of(1);
+  @ViewChild(EditUserFormPartLoaderComponent) partLoader: EditUserFormPartLoaderComponent;
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
-  setFormPartIdx(_event: EventEmitter<number>) {
-    this.formPartIdx = _event.
+  setFormPartIdx(_event: EditUserEvent) {
+    console.log("[UserEditPageComponent] Setting form part idx to: ", _event.formPartIdx);
+
+    this.partLoader.editFormPartIdx = _event.formPartIdx;
+    this.partLoader.loadComponent();
   }
 
 }

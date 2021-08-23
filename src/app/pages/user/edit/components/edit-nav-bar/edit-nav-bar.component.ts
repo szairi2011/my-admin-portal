@@ -1,17 +1,16 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { MatTabChangeEvent } from '@angular/material/tabs';
 import { Router } from '@angular/router';
-import { routes } from 'src/app/consts';
+import { EditUserEvent } from '../../models';
 
 @Component({
   selector: 'app-edit-nav-bar',
   templateUrl: './edit-nav-bar.component.html',
-  styles: [
-  ]
+  styleUrls: ['./edit-nav-bar.component.scss']
 })
 export class EditNavBarComponent implements OnInit {
 
-  @Output() editTabChanged: EventEmitter<number> = new EventEmitter();
+  @Output() editTabChanged: EventEmitter<EditUserEvent> = new EventEmitter();
 
   constructor(private router: Router) { }
 
@@ -19,12 +18,13 @@ export class EditNavBarComponent implements OnInit {
   }
 
   onTabChange(_event: MatTabChangeEvent) {
-    switch (_event.index) {
-      case 0: // First tab
-        // this.router.navigate([routes.USER_LIST_PAGE]);
-        this.editTabChanged.emit(_event.index);
-        break;
-    }
+    this.editTabChanged.emit(
+      {
+        formPartIdx: _event.index,
+        formPartName: _event.tab.textLabel
+      });
+
+    console.log("[EdiNavBarComponet] Dynamically loading edit user form part for tab: ", _event.tab.textLabel);
   }
 
 }

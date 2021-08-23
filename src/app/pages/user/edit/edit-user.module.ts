@@ -11,6 +11,7 @@ import { EditUserFormPartLoaderComponent } from './components/edit-user-form-par
 import { EditPartLoaderDirective } from './directives/edit-part-loader.directive';
 import { EditUserService } from './services/edit-user.service';
 import { EditUserAccountComponent } from './components/form-parts';
+import { EditUserProfileComponent } from './components/form-parts/edit-user-profile/edit-user-profile.component';
 
 
 
@@ -21,6 +22,7 @@ import { EditUserAccountComponent } from './components/form-parts';
     EditUserFormPartLoaderComponent,
     EditPartLoaderDirective,
     EditUserAccountComponent,
+    EditUserProfileComponent,
   ],
   imports: [
     CommonModule,
