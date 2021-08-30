@@ -1,9 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
+
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { UserEditPageComponent } from './containers/user-edit-page/user-edit-page.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { EditNavBarComponent } from './components/edit-nav-bar/edit-nav-bar.component';
@@ -27,6 +33,10 @@ import { EditUserProfileComponent } from './components/form-parts/edit-user-prof
   imports: [
     CommonModule,
     SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatCardModule,
     MatTabsModule,
     MatIconModule,

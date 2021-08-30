@@ -1,1 +1,17 @@
-<p>edit-user-account works!</p>
+<div class="edit-form-wrapper">
+  <h3>Account</h3>
+  <form [formGroup]="editAccountForm" (ngSubmit)="saveAccount()">
+    <mat-form-field class="form-item">
+      <input matInput placeholder="Username" type="text" formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field class="form-item">
+      <input matInput placeholder="Email" type="email" formControlName="email">
+    </mat-form-field>
+
+    <div class="form-actions">
+      <button class="form-actions__login" mat-raised-button color="primary" type="submit" [disabled] = "!editAccountForm.valid">Login</button>
+      <button class="form-actions__forget" mat-button>Forget password</button>
+    </div>
+  </form>
+</div>

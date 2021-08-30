@@ -1,10 +1,7 @@
-@import 'src/app/styles/colors';
+@import "src/app/styles/colors";
 // @import 'src/app/styles/font';
-@import 'src/app/styles/variables';
+@import "src/app/styles/variables";
 
-.edit-user-nav-card {
-  margin-top: 24px;
-}
 
 .nav-items-group {
   padding: 8px;
@@ -12,11 +9,13 @@
 
 .edit-user-tab-icon {
   padding-right: 10px;
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 
 .remove-border-bottom ::ng-deep .mat-tab-header {
   border-bottom: none;
 }
 
-
+::ng-deep mat-tab-header .mat-tab-label {
+  width: 15%;
+}

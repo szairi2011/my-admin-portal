@@ -33,7 +33,7 @@
       "title": "Glint survey > Take improvement actions",
       "description": "The team is asking for more rcognition -- like Bravo award ... ",
       "time": "7:3",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "f95397ac-a2e5-4f08-965c-1a006ed83229",
@@ -75,14 +75,14 @@
       "title": "COVID-19 Framework :: Introduce to the team",
       "description": "COVID-19 Framework :: Introduce to the team given the importance of the topic",
       "time": "11:54",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "f0ec76f1-cb58-4788-bbd9-7c6f6ea98b6a",
       "title": "Send Retention bonus docs to compensation as per email",
       "description": "Now that a signed copy of the retention bonus agreement is received from ll TMs, we need to send them by email as outlined by Kais. We are yet to double check few details with Jihen ...",
       "time": "11:56",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "cee88cd3-112c-433e-8cc6-c78547d1c3fd",
@@ -103,7 +103,7 @@
       "title": "Q2 Connect --> Finalize with the team members",
       "description": "Discuss post Q2 Connect ...",
       "time": "11:59",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "bb8d658f-1efa-41f8-9797-cc64133bc227",
@@ -145,6 +145,27 @@
       "title": "PSM certification :: Training pour Zied",
       "description": "Check new dates for the training with Jihen -> Follow up on the email that has been sent to Jihen :: Subject: Certified trainings",
       "time": "11:9",
+      "isComplete": false
+    },
+    {
+      "id": "e8f4728e-9c30-4afb-acfd-979d02a54622",
+      "title": "Riadh 5 year work anniversary",
+      "description": "Celebrate Riadh 5 years service anniversary",
+      "time": "7:27",
+      "isComplete": false
+    },
+    {
+      "id": "a8ceb4ab-2989-4263-91e8-493baed8d207",
+      "title": "Oumeima Hammami :: Certificat de travail hard-stamped",
+      "description": "Email is already sent to Nouha, continue following up to get the  certicate ready before Sept. 6th",
+      "time": "7:46",
+      "isComplete": false
+    },
+    {
+      "id": "3f578662-68f8-41c3-bdcb-e1cc7d43bff5",
+      "title": "Oumeima Hammami :: June payslip",
+      "description": "Follow up with Sarra to send the payslip to Oumaima",
+      "time": "7:47",
       "isComplete": false
     }
   ],
