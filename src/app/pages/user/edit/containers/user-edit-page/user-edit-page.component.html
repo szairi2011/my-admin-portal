@@ -2,7 +2,7 @@
   <app-breadcrumb></app-breadcrumb>
   <mat-card class="edit-user-nav-card">
     <mat-card-content>
-      <app-edit-nav-bar></app-edit-nav-bar>
+      <app-edit-nav-bar (editTabChanged)="setFormPartIdx($event)"></app-edit-nav-bar>
     </mat-card-content>
   </mat-card>
   <mat-card class="edit-user-form-card">

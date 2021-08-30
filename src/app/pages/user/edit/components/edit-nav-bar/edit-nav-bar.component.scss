@@ -16,6 +16,6 @@
   border-bottom: none;
 }
 
-::ng-deep mat-tab-header .mat-tab-label {
+::ng-deep mat-tab-header .mat-tab-label, .mat-tab-link {
   width: 15%;
 }
