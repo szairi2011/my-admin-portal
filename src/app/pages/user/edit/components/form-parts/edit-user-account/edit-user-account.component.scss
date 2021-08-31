@@ -1,10 +1,38 @@
+@import "src/app/styles/colors";
+// @import 'src/app/styles/font';
+@import "src/app/styles/variables";
+
 .edit-form-wrapper {
-  margin: 0;
-  width: 600px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  width: 44%;
+  padding-left: 28%;
+  padding-right: 28%;
+  // width: 600px;
 }
 
 .form-item {
   display: block;
-  margin: 0;
-  width: 600px;
+  margin-bottom: 16px;
+  // width: 600px;
+  width: 100%;
+}
+
+.button-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reset-button {
+  text-transform: uppercase;
+  border-color: $primary !important;
+  color: #536dfe;
+}
+
+.save-button {
+  text-transform: uppercase;
+  border-color: $success;
+  background-color: $success;
+  color: $white;
 }

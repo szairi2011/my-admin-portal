@@ -1,17 +1,18 @@
 <div class="edit-form-wrapper">
   <h3>Account</h3>
   <form [formGroup]="editAccountForm" (ngSubmit)="saveAccount()">
-    <mat-form-field class="form-item">
+    <mat-form-field class="form-item" appearance="outline">
       <input matInput placeholder="Username" type="text" formControlName="username">
     </mat-form-field>
 
-    <mat-form-field class="form-item">
+    <mat-form-field class="form-item" appearance="outline">
       <input matInput placeholder="Email" type="email" formControlName="email">
     </mat-form-field>
 
-    <div class="form-actions">
-      <button class="form-actions__login" mat-raised-button color="primary" type="submit" [disabled] = "!editAccountForm.valid">Login</button>
-      <button class="form-actions__forget" mat-button>Forget password</button>
+    <div class="button-wrapper">
+      <button class="reset-button" mat-stroked-button >Reset</button>
+      <button class="save-button" mat-flat-button
+        type="submit" [disabled] = "!editAccountForm.valid">Save</button>
     </div>
   </form>
 </div>

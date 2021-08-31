@@ -16,6 +16,9 @@
   border-bottom: none;
 }
 
+// By setting the width of the tab lbel, we set the width of the tab group; this worked so I kept this solution ...
 ::ng-deep mat-tab-header .mat-tab-label, .mat-tab-link {
-  width: 15%;
+  // width: 185px;
+  width: 11%;
+  min-width: 120px
 }
