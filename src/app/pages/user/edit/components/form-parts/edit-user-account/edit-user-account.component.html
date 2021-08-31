@@ -2,12 +2,34 @@
   <h3>Account</h3>
   <form [formGroup]="editAccountForm" (ngSubmit)="saveAccount()">
     <mat-form-field class="form-item" appearance="outline">
-      <input matInput placeholder="Username" type="text" formControlName="username">
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="Username" type="text" formControlName="username" required>
     </mat-form-field>
 
     <mat-form-field class="form-item" appearance="outline">
-      <input matInput placeholder="Email" type="email" formControlName="email">
+      <mat-label>Email address</mat-label>
+      <input matInput placeholder="Email" type="email" formControlName="email" required>
     </mat-form-field>
+
+    <mat-form-field class="form-item" appearance="outline">
+      <mat-label>User role</mat-label>
+      <select matNativeControl required>
+        <option *ngFor="let userRole of userRoles"
+          [value]="userRole.value">{{userRole.viewName}}</option>
+      </select>
+    </mat-form-field>
+
+    <!-- Trying something, this is a superfluous content ... -->
+
+    <!-- <mat-form-field class="form-item booking-facility">
+      <mat-select disableOptionCentering placeholder="role" class="form-select-item" panelClass="booking-facility-select" >
+        <mat-option *ngFor="let role of userRoles" [value]="role.value">
+          <span>{{ role.viewName | lowercase }}</span>
+        </mat-option>
+      </mat-select>
+    </mat-form-field> -->
+
+    <!--  -->
 
     <div class="button-wrapper">
       <button class="reset-button" mat-stroked-button >Reset</button>

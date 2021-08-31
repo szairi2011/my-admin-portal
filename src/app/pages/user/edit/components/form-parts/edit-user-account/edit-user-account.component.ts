@@ -2,7 +2,7 @@ import { AppState } from './../../../../../../store/index';
 import { Store } from '@ngrx/store';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
-import { IEditFormPartComponent } from '../../../models';
+import { IEditFormPartComponent, UserRole } from '../../../models';
 import { selectLoggedInUserInfo } from 'src/app/store/selectors';
 import { UserInfo } from 'src/app/store/models';
 
@@ -17,6 +17,16 @@ export class EditUserAccountComponent implements OnInit, IEditFormPartComponent 
 
   editAccountForm: FormGroup;
   user: UserInfo;
+  userRoles: UserRole[] = [
+    {
+      viewName: 'User',
+      value: 'user'
+    },
+    {
+      viewName: 'Admin',
+      value: 'admin'
+    }
+  ];
 
 
   constructor(
@@ -32,8 +42,9 @@ export class EditUserAccountComponent implements OnInit, IEditFormPartComponent 
 
     this.editAccountForm = this.fb.group({
       username: [this.user.username, Validators.required],
-      email: [this.user.email, Validators.required],
-      // role: [this.user.role]
+      email: [this.user.email,
+          [Validators.required, Validators.email]],
+      role: [this.user.role]
     });
   }
 

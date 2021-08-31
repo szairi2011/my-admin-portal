@@ -167,6 +167,13 @@
       "description": "Follow up with Sarra to send the payslip to Oumaima",
       "time": "7:47",
       "isComplete": false
+    },
+    {
+      "id": "49391c17-3c9b-487c-b1bd-47f13423df4c",
+      "title": "Manel :: Silver Bravo award",
+      "description": "Request a silver bravo award for Manel ...",
+      "time": "11:26",
+      "isComplete": false
     }
   ],
   "users": [
