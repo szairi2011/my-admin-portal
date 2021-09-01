@@ -2,7 +2,6 @@ import { createReducer, on } from '@ngrx/store';
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 import { UserInfo } from '../models/user-info.model';
 import * as UserInfoActions from '../actions/user-info.actions';
-import { state } from '@angular/animations';
 
 export const userInfoFeatureKey = 'userInfo';
 
@@ -98,9 +97,37 @@ export const userInfoReducer = createReducer(
   on(UserInfoActions.upsertUserInfos,
     (state, action) => userInfoAdapter.upsertMany(action.userInfos, state)
   ),
+
+  // Update user info reducers including success and failure use cases
   on(UserInfoActions.updateUserInfo,
-    (state, action) => userInfoAdapter.updateOne(action.userInfo, state)
+    (state) => {
+      return {
+        ...state,
+        loading: true
+      }
+    }
   ),
+
+  on(UserInfoActions.updateUserInfoSuccess,
+    (state, action) => userInfoAdapter.upsertOne(action.updatedUser,
+      {
+        ...state,
+        loading: false,
+        loggedInUser: action.updatedUser
+      }
+    )
+  ),
+
+  on(UserInfoActions.updateUserInfoFailure,
+    (state, action) => {
+      return {
+        ...state,
+        loading: false,
+        error: action.error
+      }
+    }
+  ),
+
   on(UserInfoActions.updateUserInfos,
     (state, action) => userInfoAdapter.updateMany(action.userInfos, state)
   ),
