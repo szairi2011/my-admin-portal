@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Update } from '@ngrx/entity';
 import { AppState } from './../../../../../../store/index';
 import { Store } from '@ngrx/store';
@@ -7,6 +8,7 @@ import { IEditFormPartComponent, UserRole } from '../../../models';
 import { selectLoggedInUserInfo, selectUserById } from 'src/app/store/selectors';
 import { UserInfo } from 'src/app/store/models';
 import { updateUserInfo } from 'src/app/store/actions';
+import { routes } from 'src/app/consts';
 
 @Component({
   selector: 'app-edit-user-account',
@@ -20,6 +22,8 @@ export class EditUserAccountComponent implements OnInit, IEditFormPartComponent 
   editAccountForm: FormGroup;
 
   user: UserInfo;
+
+  routes: routes;
 
   userRoles: UserRole[] = [
     {
@@ -36,7 +40,8 @@ export class EditUserAccountComponent implements OnInit, IEditFormPartComponent 
 
   constructor(
     private store: Store<AppState>,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -44,17 +49,6 @@ export class EditUserAccountComponent implements OnInit, IEditFormPartComponent 
     this.store.select(selectLoggedInUserInfo).subscribe(
       usr => this.user = usr
     );
-
-    /* this.store.select(selectLoggedInUserInfo).subscribe(
-      (usr) => {
-        this.store.select(selectUserById, { id: usr.id }).subscribe(
-          (_user) => {
-            this.user = _user;
-            // this.initForm();
-          }
-        )
-      }
-    ); */
 
     this.editAccountForm = this.fb.group({
       username: [this.user.username, Validators.required],
@@ -71,10 +65,6 @@ export class EditUserAccountComponent implements OnInit, IEditFormPartComponent 
 
   }
 
-  initForm() {
-
-  }
-
   updateAccount() {
     console.log("Saving user account info ...");
     const toUpdate: Update<UserInfo> = {
@@ -87,6 +77,17 @@ export class EditUserAccountComponent implements OnInit, IEditFormPartComponent 
     }
 
     this.store.dispatch(updateUserInfo({ userInfo: toUpdate }));
+
+    // const currentUrl = this.router.url;
+    // this.router.navigate([currentUrl]);
+    // this.router.navigate([currentUrl]).then();
+    // this.router.navigate(['/user/profile']).then();
+
+    const activeUrl = this.router.url
+    setTimeout(() => {
+      this.router.navigateByUrl(routes.DASHBOARD_PAGE, { skipLocationChange: false }).then(() =>
+        this.router.navigate([activeUrl]));
+    }, 200)
   }
 
 }

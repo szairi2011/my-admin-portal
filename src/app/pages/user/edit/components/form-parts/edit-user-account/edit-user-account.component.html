@@ -1,6 +1,7 @@
 <div class="edit-form-wrapper">
   <h3>Account</h3>
   <form [formGroup]="editAccountForm" (ngSubmit)="updateAccount()">
+  <!-- <form [formGroup]="editAccountForm"> -->
     <mat-form-field class="form-item" appearance="outline">
       <mat-label>Username</mat-label>
       <input matInput placeholder="Username" type="text" formControlName="username" required>
@@ -14,8 +15,7 @@
     <mat-form-field class="form-item" appearance="outline">
       <mat-label>User role</mat-label>
       <select matNativeControl required formControlName="role" [(value)]="selectedRole">
-        <option *ngFor="let userRole of userRoles"
-          [value]="userRole.value">{{userRole.viewName}}</option>
+        <option *ngFor="let userRole of userRoles" [value]="userRole.value">{{userRole.viewName}}</option>
       </select>
     </mat-form-field>
 
@@ -32,9 +32,11 @@
     <!--  -->
 
     <div class="button-wrapper">
-      <button class="reset-button" mat-stroked-button >Reset</button>
+      <button class="reset-button" mat-stroked-button>Reset</button>
       <button class="save-button" mat-flat-button
-        type="submit" [disabled] = "!editAccountForm.valid">Save</button>
+        type="submit" [disabled] = "!editAccountForm.valid" >Save</button>
+      <!-- <button class="save-button" mat-flat-button [disabled]="!editAccountForm.valid"
+        (click)="updateAccount()" [routerLink] = "['/user']">Save</button> -->
     </div>
   </form>
 </div>

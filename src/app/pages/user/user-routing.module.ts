@@ -17,9 +17,10 @@ const routes: Routes = [
     data: { breadcrumb: 'list'}
   },
   {
-    path: 'user',
+    path: 'edit',
     pathMatch: 'full',
-    redirectTo: 'list'
+    component: UserEditPageComponent,
+    data: { breadcrumb: 'Edit user'}
   },
   {
     path: 'profile',
@@ -28,11 +29,11 @@ const routes: Routes = [
     data: { breadcrumb: 'profile'}
   },
   {
-    path: 'edit',
+    path: 'user',
     pathMatch: 'full',
-    component: UserEditPageComponent,
-    data: { breadcrumb: 'Edit user'}
+    redirectTo: 'list'
   }
+
 ];
 
 @NgModule({

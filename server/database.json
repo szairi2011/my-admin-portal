@@ -171,7 +171,7 @@
     {
       "id": "49391c17-3c9b-487c-b1bd-47f13423df4c",
       "title": "Manel :: Silver Bravo award",
-      "description": "Request a silver bravo award for Manel ...",
+      "description": "Request a silver bravo award for Manel ...\n   - Request sent, waiting for confirmation from Jihen ...",
       "time": "11:26",
       "isComplete": false
     }
@@ -181,11 +181,11 @@
       "id": "5f0e8cb3-9246-462d-b756-9e5237b3f58b",
       "firstname": "Anika",
       "lastname": "Ortiz",
-      "password": "Jh4KghM8zBAFZLJ",
+      "password": "welcome",
       "username": "anika.ortiz@fisglobal.com",
       "email": "anika.ortiz@fisglobal.com",
       "company": "FIS",
-      "role": "admin",
+      "role": "user",
       "skills": [
         "Brand",
         "Usability",
@@ -197,7 +197,7 @@
       "id": "226afcb0-d7b5-42f3-a282-213fb4d096fc",
       "firstname": "Verlie",
       "lastname": "Skiles",
-      "password": "uhM1ooaJEnqiqh6",
+      "password": "welcome",
       "username": "verlie.skiles@fisglobal.com",
       "email": "verlie.skiles@fisglobal.com",
       "company": "FIS",

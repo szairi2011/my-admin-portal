@@ -4,7 +4,7 @@ import { Update } from '@ngrx/entity';
 
 import { Injectable } from '@angular/core';
 import { FormPartItem } from '../models';
-import { EditUserAccountComponent, EditUserProfileComponent } from '../components/form-parts';
+import { EditUserAccountComponent, EditUserCredsComponent, EditUserProfileComponent } from '../components/form-parts';
 import { UserInfo } from 'src/app/store/models';
 import { environment } from 'src/environments/environment';
 
@@ -28,6 +28,10 @@ export class EditUserService {
       {
         component: EditUserProfileComponent,
         data: 'Date for edit user profile form part'
+      },
+      {
+        component: EditUserCredsComponent,
+        data: 'Data for edit user credential form part'
       }
     ];
   }
