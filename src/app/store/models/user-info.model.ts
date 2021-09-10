@@ -1,3 +1,5 @@
+import { channels } from "src/app/consts";
+
 export interface UserInfo {
   id: string;
   firstname: string;
@@ -7,5 +9,7 @@ export interface UserInfo {
   email: string;
   company?: string;
   role?: string;
+  notify?: boolean;
+  com_channels?: channels[];
   skills?: string[];
 }

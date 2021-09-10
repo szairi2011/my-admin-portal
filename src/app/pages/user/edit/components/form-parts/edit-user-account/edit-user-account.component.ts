@@ -21,6 +21,8 @@ export class EditUserAccountComponent implements OnInit, IEditFormPartComponent 
 
   editAccountForm: FormGroup;
 
+  // navUrl: string;
+
   user: UserInfo;
 
   routes: routes;
@@ -78,16 +80,28 @@ export class EditUserAccountComponent implements OnInit, IEditFormPartComponent 
 
     this.store.dispatch(updateUserInfo({ userInfo: toUpdate }));
 
-    // const currentUrl = this.router.url;
+    /* this.navUrl = this.router.url;
+    const _index = this.navUrl.indexOf('2');
+    if (this.navUrl.endsWith('2')) {
+      this.navUrl = this.router.url.substring(0, _index - 1);
+    }
+    else {
+      this.navUrl += '2';
+    }
+
+    console.log('Form submitted, re-routing to: ' + this.navUrl); */
+
     // this.router.navigate([currentUrl]);
     // this.router.navigate([currentUrl]).then();
     // this.router.navigate(['/user/profile']).then();
 
-    const activeUrl = this.router.url
+    const activeUrl = this.router.url;
+
     setTimeout(() => {
       this.router.navigateByUrl(routes.DASHBOARD_PAGE, { skipLocationChange: false }).then(() =>
         this.router.navigate([activeUrl]));
     }, 200)
+
   }
 
 }

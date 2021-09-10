@@ -11,16 +11,22 @@ const routes: Routes = [
     redirectTo: 'list'
   },
   {
-    path: 'list',
+    path: 'edit2',
     pathMatch: 'full',
-    component: UserListPageComponent,
-    data: { breadcrumb: 'list'}
+    component: UserEditPageComponent,
+    data: { breadcrumb: 'Edit user'}
   },
   {
     path: 'edit',
     pathMatch: 'full',
     component: UserEditPageComponent,
     data: { breadcrumb: 'Edit user'}
+  },
+  {
+    path: 'list',
+    pathMatch: 'full',
+    component: UserListPageComponent,
+    data: { breadcrumb: 'list'}
   },
   {
     path: 'profile',

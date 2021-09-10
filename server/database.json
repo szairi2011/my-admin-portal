@@ -131,7 +131,7 @@
       "title": "RegU item to be completed",
       "description": "Check email - A RISC REGU item needs to be addressed ...",
       "time": "8:55",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "8daf02f5-642d-40fa-959f-7dc407af14b3",
@@ -152,14 +152,14 @@
       "title": "Riadh 5 year work anniversary",
       "description": "Celebrate Riadh 5 years service anniversary",
       "time": "7:27",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "a8ceb4ab-2989-4263-91e8-493baed8d207",
       "title": "Oumeima Hammami :: Certificat de travail hard-stamped",
       "description": "Email is already sent to Nouha, continue following up to get the  certicate ready before Sept. 6th",
       "time": "7:46",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "3f578662-68f8-41c3-bdcb-e1cc7d43bff5",
@@ -197,17 +197,22 @@
       "id": "226afcb0-d7b5-42f3-a282-213fb4d096fc",
       "firstname": "Verlie",
       "lastname": "Skiles",
-      "password": "welcome",
+      "password": "1234",
       "username": "verlie.skiles@fisglobal.com",
       "email": "verlie.skiles@fisglobal.com",
       "company": "FIS",
-      "role": "Regional Division Orchestrator",
+      "role": "admin",
       "skills": [
         "Communications",
         "Markets",
         "Marketing",
         "Quality"
-      ]
+      ],
+      "com_channels": [
+        "email",
+        "phone"
+      ],
+      "notify": true
     },
     {
       "id": "0f0c4782-c26e-4417-bc7a-52657569229d",

@@ -10,6 +10,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { NgModule } from '@angular/core';
 import { UserEditPageComponent } from './containers/user-edit-page/user-edit-page.component';
@@ -21,6 +23,7 @@ import { EditUserService } from './services/edit-user.service';
 import { EditUserAccountComponent } from './components/form-parts';
 import { EditUserProfileComponent } from './components/form-parts';
 import { EditUserCredsComponent } from './components/form-parts';
+import { EditUserSettingsComponent } from './components/form-parts/edit-user-settings/edit-user-settings.component';
 
 
 
@@ -33,6 +36,7 @@ import { EditUserCredsComponent } from './components/form-parts';
     EditUserAccountComponent,
     EditUserProfileComponent,
     EditUserCredsComponent,
+    EditUserSettingsComponent,
   ],
   imports: [
     CommonModule,
@@ -46,6 +50,8 @@ import { EditUserCredsComponent } from './components/form-parts';
     MatCardModule,
     MatTabsModule,
     MatIconModule,
+    MatCheckboxModule,
+    MatSlideToggleModule,
     RouterModule
   ],
   providers: [
