@@ -1,7 +1,7 @@
 <div class="edit-form-wrapper">
   <h3>Password</h3>
 
-  <form [formGroup]="editCredsForm" >
+  <form [formGroup]="editCredsForm">
     <mat-form-field class="form-item" appearance="outline">
       <mat-label>Current password</mat-label>
       <input matInput placeholder="Current password" (keyup)="checkCurrentCreds()"
@@ -16,12 +16,19 @@
 
     <mat-form-field class="form-item" appearance="outline">
       <mat-label>New password</mat-label>
-      <input matInput placeholder="New password" type="password" formControlName="new_password" required>
+      <input matInput placeholder="New password" (keyup)="checkNewCreds()" type="password"
+        formControlName="new_password" required>
+      <mat-error *ngIf="this.editCredsForm.controls['new_password'].getError('incorrect')">
+        New password must be different than current one ...
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field class="form-item" appearance="outline">
       <mat-label>Verify password</mat-label>
-      <input matInput placeholder="Verify password" type="password" formControlName="verify_password" required>
+      <input matInput placeholder="Verify password" (keyup)="checkVerifyCreds()" type="password" formControlName="verify_password" required>
+      <mat-error *ngIf="this.editCredsForm.controls['new_password'].getError('incorrect')">
+        Same password as the new one should be provided ...
+      </mat-error>
     </mat-form-field>
 
     <div class="button-wrapper">

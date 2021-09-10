@@ -87,6 +87,7 @@ export class EditUserCredsComponent implements OnInit, IEditFormPartComponent {
     return _isValidChange;
   }
 
+  // Set error message for current-password validation
   checkCurrentCreds() {
     const current_pwd_control = this.editCredsForm.controls['current_password']
     const isValid = (this.user.password == current_pwd_control.value);
@@ -95,6 +96,37 @@ export class EditUserCredsComponent implements OnInit, IEditFormPartComponent {
     }
     else {
       current_pwd_control.setErrors(null);
+    }
+  }
+
+  /*
+    - New password should be different than current one
+    - Set error message for new password after validation
+  */
+  checkNewCreds() {
+    const new_pwd_control = this.editCredsForm.controls['new_password']
+    const isValid = (this.user.password != new_pwd_control.value);
+    if (!isValid) {
+      new_pwd_control.setErrors({ 'incorrect': true});
+    }
+    else {
+      new_pwd_control.setErrors(null);
+    }
+  }
+
+  /*
+    - verify_password field must be the same as new_password
+    - Set error message for verify_password after validation
+  */
+  checkVerifyCreds() {
+    const verify_pwd_control = this.editCredsForm.controls['verify_password'];
+    const new_pwd_control = this.editCredsForm.controls['new_password']
+    const isValid = (new_pwd_control.value == verify_pwd_control.value);
+    if (!isValid) {
+      verify_pwd_control.setErrors({ 'incorrect': true});
+    }
+    else {
+      verify_pwd_control.setErrors(null);
     }
   }
 
