@@ -46,7 +46,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(
     routes,
     {
-      useHash: true
+      useHash: true,
     })],
   exports: [RouterModule]
 })

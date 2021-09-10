@@ -41,11 +41,23 @@ export const upsertUserInfos = createAction(
   props<{ userInfos: UserInfo[] }>()
 );
 
+// Update user info actions including success and failure cases
 export const updateUserInfo = createAction(
   '[UserInfo/API] Update UserInfo',
   props<{ userInfo: Update<UserInfo> }>()
 );
 
+export const updateUserInfoSuccess = createAction(
+  '[UserInfo/API] Update UserInfo success',
+  props<{ updatedUser: UserInfo }>()
+);
+
+export const updateUserInfoFailure = createAction(
+  '[UserInfo/API] Update UserInfo failure',
+  props<{ error: Error }>()
+);
+
+//
 export const updateUserInfos = createAction(
   '[UserInfo/API] Update UserInfos',
   props<{ userInfos: Update<UserInfo>[] }>()

@@ -53,3 +53,13 @@ A number of start up scripts have been created for convenience:
 ========
 
 4. ng g feature store/features/user-task --group --reducers ../index.ts --module pages/user/profile/profile.module.ts --skip-tests --dry-run
+
+To test your Angular build locally:
+
+## Build your app: ng build --prod
+We may need to build a stable release and deploy the app, while switching to a different Git branch to continue improving the app and avoid ops interruptions untill we get a CI ready for this app. For this: 
+1. Make sure to check out to master branch first, than merge from any previous branching if needed
+2. Build the app usng following command: > ng build -prod
+2. Install http-server for serving the app: > npm i -g http-server
+3. cd (change directory) into the the build location and run the app by typing command > http-server
+4. Open http-server url appending /index.html to it, should look something like this http://127.0.0.1:8080/index.html

@@ -33,6 +33,146 @@
       "title": "Glint survey > Take improvement actions",
       "description": "The team is asking for more rcognition -- like Bravo award ... ",
       "time": "7:3",
+      "isComplete": true
+    },
+    {
+      "id": "f95397ac-a2e5-4f08-965c-1a006ed83229",
+      "title": "Send email to Ramla about MSPC ADP position",
+      "description": "",
+      "time": "11:52",
+      "isComplete": true
+    },
+    {
+      "id": "3fb0bdb5-7d4c-4dac-b131-da0bebf8e18f",
+      "title": "Send email about the interns offboarding and notify offboarding team + Ramla + Jihen",
+      "description": "",
+      "time": "11:52",
+      "isComplete": true
+    },
+    {
+      "id": "a5b1753e-e5f1-42f9-b617-9de70905d313",
+      "title": "Set a meeting with the team about FISCD backoffice move/opportunities ",
+      "description": "",
+      "time": "11:52",
+      "isComplete": true
+    },
+    {
+      "id": "b7ebab0b-f4a7-40b6-9ea8-c8a96525f595",
+      "title": "Envoyer facture pour la piscine au CCE",
+      "description": "",
+      "time": "11:52",
+      "isComplete": true
+    },
+    {
+      "id": "6db0cd34-fc4a-4cd9-9492-c5e64e9ddbd5",
+      "title": "Imen Touaibi :: New joiner curriculum is late",
+      "description": "- Imen Touaibi :: New joiner curriculum is the latest amongst all the joiners. So, we need to accelerate.",
+      "time": "11:54",
+      "isComplete": false
+    },
+    {
+      "id": "ae09a3a0-101b-4695-84aa-cd1b67e52d1b",
+      "title": "COVID-19 Framework :: Introduce to the team",
+      "description": "COVID-19 Framework :: Introduce to the team given the importance of the topic",
+      "time": "11:54",
+      "isComplete": true
+    },
+    {
+      "id": "f0ec76f1-cb58-4788-bbd9-7c6f6ea98b6a",
+      "title": "Send Retention bonus docs to compensation as per email",
+      "description": "Now that a signed copy of the retention bonus agreement is received from ll TMs, we need to send them by email as outlined by Kais. We are yet to double check few details with Jihen ...",
+      "time": "11:56",
+      "isComplete": true
+    },
+    {
+      "id": "cee88cd3-112c-433e-8cc6-c78547d1c3fd",
+      "title": "Recruitment -- MSPC position find 2 resources",
+      "description": "Looking for 1 ADP and 1 senior position with UBIX knowledge, i.e. 2 in total ...",
+      "time": "11:58",
+      "isComplete": false
+    },
+    {
+      "id": "cc07dedc-5876-4b4c-b56c-db00d7f5cbd8",
+      "title": "Change Workspace profile for Sameh to Home",
+      "description": "",
+      "time": "11:58",
+      "isComplete": false
+    },
+    {
+      "id": "5c273460-4ce8-46b2-8496-b976e39e5ea2",
+      "title": "Q2 Connect --> Finalize with the team members",
+      "description": "Discuss post Q2 Connect ...",
+      "time": "11:59",
+      "isComplete": true
+    },
+    {
+      "id": "bb8d658f-1efa-41f8-9797-cc64133bc227",
+      "title": "Discuss with Sameh about the new Edition of the PMP content",
+      "description": "",
+      "time": "11:59",
+      "isComplete": false
+    },
+    {
+      "id": "ad059898-7dd9-41c4-aadf-a479b4634963",
+      "title": "Discuss SGW SA automation targets ...",
+      "description": "Discuss SGW SA automation targets and plan with Emira/Riadh :: Schedule a meeting to discuss. Another follow up will be required to finalize",
+      "time": "12:0",
+      "isComplete": false
+    },
+    {
+      "id": "88e18816-1549-4df4-a846-492698e6602e",
+      "title": "Move to FIS CD backoffice :: Discuss with the team",
+      "description": "If not enough volunteers for the 2 Dev + 1 QA positions, the selection rules would be about the extent of knowledge in SGW. The rule will announced to the team few days in advance ...",
+      "time": "11:55",
+      "isComplete": false
+    },
+    {
+      "id": "060a3e46-52b3-4265-a973-3494be2eb31a",
+      "title": "RegU item to be completed",
+      "description": "Check email - A RISC REGU item needs to be addressed ...",
+      "time": "8:55",
+      "isComplete": true
+    },
+    {
+      "id": "8daf02f5-642d-40fa-959f-7dc407af14b3",
+      "title": "Emira :: Reason to refuse to sign the training certification agreement",
+      "description": "Check email from Houssem subject: \"Engagement certification test manager\" ... An additional point was raised by Amani that no engagement is required for FIS staff tenure older than 3 years; a verifier avec Jihen ...",
+      "time": "10:37",
+      "isComplete": false
+    },
+    {
+      "id": "65307858-cbf1-439d-8c51-6be2ae95c244",
+      "title": "PSM certification :: Training pour Zied",
+      "description": "Check new dates for the training with Jihen -> Follow up on the email that has been sent to Jihen :: Subject: Certified trainings",
+      "time": "11:9",
+      "isComplete": false
+    },
+    {
+      "id": "e8f4728e-9c30-4afb-acfd-979d02a54622",
+      "title": "Riadh 5 year work anniversary",
+      "description": "Celebrate Riadh 5 years service anniversary",
+      "time": "7:27",
+      "isComplete": true
+    },
+    {
+      "id": "a8ceb4ab-2989-4263-91e8-493baed8d207",
+      "title": "Oumeima Hammami :: Certificat de travail hard-stamped",
+      "description": "Email is already sent to Nouha, continue following up to get the  certicate ready before Sept. 6th",
+      "time": "7:46",
+      "isComplete": true
+    },
+    {
+      "id": "3f578662-68f8-41c3-bdcb-e1cc7d43bff5",
+      "title": "Oumeima Hammami :: June payslip",
+      "description": "Follow up with Sarra to send the payslip to Oumaima",
+      "time": "7:47",
+      "isComplete": false
+    },
+    {
+      "id": "49391c17-3c9b-487c-b1bd-47f13423df4c",
+      "title": "Manel :: Silver Bravo award",
+      "description": "Request a silver bravo award for Manel ...\n   - Request sent, waiting for confirmation from Jihen ...",
+      "time": "11:26",
       "isComplete": false
     },
     {
@@ -125,11 +265,11 @@
       "id": "5f0e8cb3-9246-462d-b756-9e5237b3f58b",
       "firstname": "Anika",
       "lastname": "Ortiz",
-      "password": "Jh4KghM8zBAFZLJ",
+      "password": "welcome",
       "username": "anika.ortiz@fisglobal.com",
       "email": "anika.ortiz@fisglobal.com",
       "company": "FIS",
-      "role": "International Assurance Orchestrator",
+      "role": "user",
       "skills": [
         "Brand",
         "Usability",
@@ -141,17 +281,22 @@
       "id": "226afcb0-d7b5-42f3-a282-213fb4d096fc",
       "firstname": "Verlie",
       "lastname": "Skiles",
-      "password": "uhM1ooaJEnqiqh6",
+      "password": "1234",
       "username": "verlie.skiles@fisglobal.com",
       "email": "verlie.skiles@fisglobal.com",
       "company": "FIS",
-      "role": "Regional Division Orchestrator",
+      "role": "admin",
       "skills": [
         "Communications",
         "Markets",
         "Marketing",
         "Quality"
-      ]
+      ],
+      "com_channels": [
+        "email",
+        "phone"
+      ],
+      "notify": true
     },
     {
       "id": "0f0c4782-c26e-4417-bc7a-52657569229d",

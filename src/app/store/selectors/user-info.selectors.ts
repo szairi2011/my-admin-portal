@@ -42,3 +42,11 @@ export const selectLoggedInUserInfo = createSelector(
     return state.loggedInUser
   }
 )
+
+export const selectUserById = createSelector(
+  _userInfoFeatureSelector,
+  (state: UserInfoState, props) => {
+    const user = state.entities[props.id];
+    return user;
+  }
+);
