@@ -269,13 +269,17 @@
       "username": "anika.ortiz@fisglobal.com",
       "email": "anika.ortiz@fisglobal.com",
       "company": "FIS",
-      "role": "user",
+      "role": "admin",
       "skills": [
         "Brand",
         "Usability",
         "Integration",
         "Brand"
-      ]
+      ],
+      "com_channels": [
+        "phone"
+      ],
+      "notify": true
     },
     {
       "id": "226afcb0-d7b5-42f3-a282-213fb4d096fc",

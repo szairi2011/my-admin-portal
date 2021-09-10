@@ -54,9 +54,9 @@ export class EditUserSettingsComponent implements OnInit {
 
     this.editSettingsForm = this.fb.group({
       role: [this.user.role],
-      email_channel: this.user.com_channels.indexOf(channels.EMAIL) > -1 ? true:false,
-      message_channel: this.user.com_channels.indexOf(channels.MESSAGES) > -1 ? true:false,
-      phone_channel: this.user.com_channels.indexOf(channels.PHONE) > -1 ? true:false,
+      email_channel: this.user.com_channels?.indexOf(channels.EMAIL) > -1 ? true:false,
+      message_channel: this.user.com_channels?.indexOf(channels.MESSAGES) > -1 ? true:false,
+      phone_channel: this.user.com_channels?.indexOf(channels.PHONE) > -1 ? true:false,
       notify: this.user.notify
     });
 
