@@ -1,0 +1,14 @@
+<ng-template #add_account>
+  <div class="add-form-wrapper">
+    <h3>Create new account</h3>
+    <form [formGroup]="addAccountForm">
+      <mat-form-field class="form-item" appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username" type="text" formControlName="username" required>
+      </mat-form-field>
+      <div>
+        <button mat-button (click)="stepper.next()">Next</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

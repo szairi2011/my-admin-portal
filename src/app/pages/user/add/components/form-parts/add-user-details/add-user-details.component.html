@@ -1,0 +1,16 @@
+<ng-template #add_user_details>
+  <div class="add-form-wrapper">
+    <h3>Create user details</h3>
+    <form [formGroup]="addUserDetailsForm">
+      <!-- <form [formGroup]="editAccountForm"> -->
+      <mat-form-field class="form-item" appearance="outline">
+        <mat-label>Firstname</mat-label>
+        <input matInput placeholder="Firtsname" type="text" formControlName="firstname" required>
+      </mat-form-field>
+      <div>
+        <button mat-button (click)="stepper.previous()">Back</button>
+        <button mat-button (click)="stepper.next()">Next</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

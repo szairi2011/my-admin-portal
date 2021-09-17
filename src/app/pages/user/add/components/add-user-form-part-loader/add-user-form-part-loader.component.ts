@@ -1,6 +1,7 @@
+import { AddUserDetailsComponent } from './../form-parts/add-user-details/add-user-details.component';
+import { AddUserAccountComponent } from './../form-parts/add-user-account/add-user-account.component';
 import { MatHorizontalStepper } from '@angular/material/stepper';
-import { Observable } from 'rxjs';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { Component, Input, OnInit, TemplateRef, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
@@ -10,15 +11,13 @@ import { Component, Input, OnInit, TemplateRef, ViewChild, AfterViewInit } from 
 })
 export class AddUserFormPartLoaderComponent implements OnInit, AfterViewInit {
 
-  addAccountForm: FormGroup;
-  addUserDetailsForm: FormGroup;
+  @Input('stepper') stepper: MatHorizontalStepper;
 
   stepTemplateRefs: TemplateRef<any>[];
 
-  @ViewChild('part_1') part_1: TemplateRef<any>;
-  @ViewChild('part_2') part_2: TemplateRef<any>;
+  @ViewChild(AddUserAccountComponent) accountComponent: AddUserAccountComponent;
 
-  @Input('stepper') stepper: MatHorizontalStepper;
+  @ViewChild(AddUserDetailsComponent) detailsComponent: AddUserDetailsComponent;
 
   constructor(
     private fb: FormBuilder
@@ -26,19 +25,15 @@ export class AddUserFormPartLoaderComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit(): void {
-    this.addAccountForm = this.fb.group({
-      username: ['', Validators.required]
-    });
-
-    this.addUserDetailsForm = this.fb.group({
-      firstname: ['', Validators.required]
-    });
 
   }
 
   ngAfterViewInit(): void {
     setTimeout(
-      () => this.stepTemplateRefs = [this.part_1, this.part_2]
+      () => this.stepTemplateRefs = [
+          this.accountComponent.add_account,
+          this.detailsComponent.user_details
+        ]
     )
   }
 }

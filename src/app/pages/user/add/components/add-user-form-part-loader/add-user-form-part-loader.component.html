@@ -1,34 +1,12 @@
 
-<ng-container *ngTemplateOutlet="stepTemplateRefs  ? stepTemplateRefs[stepper?.selectedIndex] : part_1"></ng-container>
+<ng-container *ngIf="stepTemplateRefs else loading">
+  <ng-container  *ngTemplateOutlet="stepTemplateRefs[stepper?.selectedIndex]"></ng-container>
+</ng-container>
 
-<ng-template #part_1>
-  <div class="add-form-wrapper">
-    <h3>Create new account</h3>
-    <form [formGroup]="addAccountForm">
-      <mat-form-field class="form-item" appearance="outline">
-        <mat-label>Username</mat-label>
-        <input matInput placeholder="Username" type="text" formControlName="username" required>
-      </mat-form-field>
-      <div>
-        <button mat-button (click)="stepper.next()">Next</button>
-      </div>
-    </form>
-  </div>
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
 </ng-template>
 
-<ng-template #part_2>
-  <div class="add-form-wrapper">
-    <h3>Create user details</h3>
-    <form [formGroup]="addUserDetailsForm">
-      <!-- <form [formGroup]="editAccountForm"> -->
-      <mat-form-field class="form-item" appearance="outline">
-        <mat-label>Firstname</mat-label>
-        <input matInput placeholder="Firtsname" type="text" formControlName="firstname" required>
-      </mat-form-field>
-      <div>
-        <button mat-button (click)="stepper.previous()">Back</button>
-        <button mat-button (click)="stepper.next()">Next</button>
-      </div>
-    </form>
-  </div>
-</ng-template>
+<app-add-user-account [stepper]="stepper"></app-add-user-account>
+
+<app-add-user-details [stepper]="stepper"></app-add-user-details>

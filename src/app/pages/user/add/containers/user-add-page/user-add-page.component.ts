@@ -1,3 +1,4 @@
+import { AddUserFormPartLoaderComponent } from './../../components/add-user-form-part-loader/add-user-form-part-loader.component';
 import { AddUserFormStepperComponent } from './../../components/add-user-form-stepper/add-user-form-stepper.component';
 import { FormGroup } from '@angular/forms';
 import { MatHorizontalStepper } from '@angular/material/stepper';
@@ -17,8 +18,7 @@ export class UserAddPageComponent implements OnInit, AfterViewInit {
   @ViewChild(AddUserFormStepperComponent) stepperComponent : AddUserFormStepperComponent;
 
   stepForms: FormGroup[];
-  @ViewChild('addAccountForm') accountForm : FormGroup;
-  @ViewChild('addUserDetailsForm') userDetailsForm : FormGroup;
+  @ViewChild(AddUserFormPartLoaderComponent) loaderComponent : AddUserFormPartLoaderComponent;
 
   ngOnInit(): void {
 
@@ -26,7 +26,10 @@ export class UserAddPageComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     setTimeout(() => {
-      this.stepForms = [this.accountForm, this.userDetailsForm];
+      this.stepForms = [
+        this.loaderComponent.accountComponent.addAccountForm,
+        this.loaderComponent.detailsComponent.addUserDetailsForm
+      ];
       this.stepper = this.stepperComponent.stepper;
       console.log("UserAddPageComponent :: stepperComponent value: ", this.stepperComponent);
       console.log("UserAddPageComponent :: Stepper value: ", this.stepper);

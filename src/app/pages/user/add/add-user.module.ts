@@ -20,13 +20,17 @@ import { AddUserRoutingModule } from './add-user-routing.module';
 import { UserAddPageComponent } from './containers/user-add-page/user-add-page.component';
 import { AddUserFormStepperComponent } from './components/add-user-form-stepper/add-user-form-stepper.component';
 import { AddUserFormPartLoaderComponent } from './components/add-user-form-part-loader/add-user-form-part-loader.component';
+import { AddUserAccountComponent } from './components/form-parts/add-user-account/add-user-account.component';
+import { AddUserDetailsComponent } from './components/form-parts/add-user-details/add-user-details.component';
 
 
 @NgModule({
   declarations: [
     UserAddPageComponent,
     AddUserFormStepperComponent,
-    AddUserFormPartLoaderComponent
+    AddUserFormPartLoaderComponent,
+    AddUserAccountComponent,
+    AddUserDetailsComponent
   ],
   imports: [
     CommonModule,
