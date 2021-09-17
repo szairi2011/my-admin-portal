@@ -12,6 +12,31 @@ A number of start up scripts have been created for convenience:
 1. `npm run dev` to start the json-server database, and bootstrap the Angular application in parallel.
 2. `npm run generate` to generate a fake database for a convenient development experience
 
+
+## Hints
+
+### Start by creating modules first
+A better way to create a new module, e.g. customers, orders, or messages, is to start with a module creation with routing enabled:
+e.g. 
+  > ng generate module customers --routing
+
+Then add components after that:
+e.g. 
+  > ng generate component customers/customer-list
+
+### Recommended VSC extensions for this course
+1. 
+
+### Installing Material Moment adapter
+Material Moment enables a richer UI experience for Date and Time parsing, validation, and manipulation.
+To install Moment for Angular Material, we can follow below steps:
+  > npm install --save moment
+  
+  to install the last version of Moment js, then:
+
+  > npm install --save @angular/material-moment-adapter@10.2.7
+
+
 ## How to set up NgRx and scaffold the store
 1. Install the npm packages:
   a. 
@@ -63,3 +88,10 @@ We may need to build a stable release and deploy the app, while switching to a d
 2. Install http-server for serving the app: > npm i -g http-server
 3. cd (change directory) into the the build location and run the app by typing command > http-server
 4. Open http-server url appending /index.html to it, should look something like this http://127.0.0.1:8080/index.html
+
+
+## Useful Tutorials
+
+Tuto for this project is available under -- https://www.linkedin.com/learning/angular-material-design-2/
+
+Another interesting baseline course for Angular is available under -- https://www.linkedin.com/learning/angular-essential-training-2/

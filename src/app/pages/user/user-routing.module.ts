@@ -1,3 +1,4 @@
+import { UserAddPageComponent } from './add/containers/user-add-page/user-add-page.component';
 import { UserEditPageComponent } from './edit/containers/user-edit-page/user-edit-page.component';
 import { UserListPageComponent } from './list/containers/user-list-page';
 import { NgModule } from '@angular/core';
@@ -11,16 +12,16 @@ const routes: Routes = [
     redirectTo: 'list'
   },
   {
-    path: 'edit2',
+    path: 'edit',
     pathMatch: 'full',
     component: UserEditPageComponent,
     data: { breadcrumb: 'Edit user'}
   },
   {
-    path: 'edit',
+    path: 'add',
     pathMatch: 'full',
-    component: UserEditPageComponent,
-    data: { breadcrumb: 'Edit user'}
+    component: UserAddPageComponent,
+    data: { breadcrumb: 'Add user'}
   },
   {
     path: 'list',

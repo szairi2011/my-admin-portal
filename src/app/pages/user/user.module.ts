@@ -8,6 +8,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { EditUserModule } from './edit/edit-user.module';
+import { AddUserModule } from './add/add-user.module';
 
 @NgModule({
   declarations: [],
@@ -18,7 +19,8 @@ import { EditUserModule } from './edit/edit-user.module';
     SharedModule,
     MatToolbarModule,
     UserListModule,
-    EditUserModule
+    EditUserModule,
+    AddUserModule
   ]
 })
 export class UserModule { }

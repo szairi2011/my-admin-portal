@@ -124,7 +124,7 @@
       "title": "Move to FIS CD backoffice :: Discuss with the team",
       "description": "If not enough volunteers for the 2 Dev + 1 QA positions, the selection rules would be about the extent of knowledge in SGW. The rule will announced to the team few days in advance ...",
       "time": "11:55",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "060a3e46-52b3-4265-a973-3494be2eb31a",
@@ -166,7 +166,7 @@
       "title": "Oumeima Hammami :: June payslip",
       "description": "Follow up with Sarra to send the payslip to Oumaima",
       "time": "7:47",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "49391c17-3c9b-487c-b1bd-47f13423df4c",
@@ -256,6 +256,34 @@
       "id": "ad059898-7dd9-41c4-aadf-a479b4634963",
       "title": "Discuss SGW SA automation targets ...",
       "description": "Discuss SGW SA automation targets and plan with Emira/Riadh :: Schedule a meeting to discuss. Another follow up will be required to finalize",
+      "time": "12:0",
+      "isComplete": false
+    },
+    {
+      "id": "37e26dea-8e23-4759-ad57-a3c9e6ea04b0",
+      "title": "Development envs system recovery :: check if any risks to mitigate",
+      "description": "Discussed with Zied and shared risks with Damien. Next is to follow up with Damien ...",
+      "time": "16:16",
+      "isComplete": false
+    },
+    {
+      "id": "8f9f3dca-3dec-4368-ae60-d9451a375ab4",
+      "title": "Sameh :: Conge de maternite verifier process, duree ",
+      "description": "Confirmer la duree et le process a Clement",
+      "time": "10:34",
+      "isComplete": false
+    },
+    {
+      "id": "f7cf8142-e0b7-4e4a-9245-c4de0f387d27",
+      "title": "Backoffice move :: Send resource names to Damien ",
+      "description": "",
+      "time": "11:54",
+      "isComplete": false
+    },
+    {
+      "id": "25545a34-7ed3-4562-8a80-bd1895f55cc8",
+      "title": "Mettre 2 Focus area dans GLINT",
+      "description": "",
       "time": "12:0",
       "isComplete": false
     }
