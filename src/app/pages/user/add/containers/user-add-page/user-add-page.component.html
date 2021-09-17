@@ -3,13 +3,14 @@
 
   <mat-card class="add-user-form-stepper-card">
     <mat-card-content>
-      <app-add-user-form-stepper></app-add-user-form-stepper>
+      <app-add-user-form-stepper [accountForm]="accountForm" [userDetailsForm]="userDetailsForm">
+      </app-add-user-form-stepper>
     </mat-card-content>
   </mat-card>
 
   <mat-card class="add-user-form-part-loader-card">
     <mat-card-content>
-      <app-add-user-form-part-loader></app-add-user-form-part-loader>
+      <app-add-user-form-part-loader [stepper]="stepper"></app-add-user-form-part-loader>
     </mat-card-content>
   </mat-card>
 
