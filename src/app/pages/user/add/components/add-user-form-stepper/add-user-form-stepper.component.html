@@ -1,15 +1,13 @@
 <mat-horizontal-stepper [linear]="true" #stepper>
 
-  <mat-step [stepControl]="addAccountForm">
-    <ng-template matStepLabel>Create Account</ng-template>
-  </mat-step>
+  <ng-container *ngIf="stepForms">
+    <mat-step [stepControl]="stepForms[0]">
+      <ng-template matStepLabel>Create Account</ng-template>
+    </mat-step>
 
-  <mat-step [stepControl]="addUserDetailsForm">
-    <ng-template matStepLabel>Create user details</ng-template>
-  </mat-step>
+    <mat-step [stepControl]="stepForms[1]">
+      <ng-template matStepLabel>Create user details</ng-template>
+    </mat-step>
+  </ng-container>
 
 </mat-horizontal-stepper>
-
-
-
-

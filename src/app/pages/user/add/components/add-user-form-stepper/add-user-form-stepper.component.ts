@@ -10,8 +10,7 @@ import { Component, OnInit, Input, ViewChild } from '@angular/core';
 })
 export class AddUserFormStepperComponent implements OnInit {
 
-  @Input('accountForm') addAccountForm: FormGroup;
-  @Input('userDetailsForm') addUserDetailsForm: FormGroup;
+  @Input('stepForms') stepForms: FormGroup[];
 
   @ViewChild('stepper') stepper : MatHorizontalStepper;
 

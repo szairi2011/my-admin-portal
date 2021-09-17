@@ -16,6 +16,7 @@ export class UserAddPageComponent implements OnInit, AfterViewInit {
   stepper: MatHorizontalStepper;
   @ViewChild(AddUserFormStepperComponent) stepperComponent : AddUserFormStepperComponent;
 
+  stepForms: FormGroup[];
   @ViewChild('addAccountForm') accountForm : FormGroup;
   @ViewChild('addUserDetailsForm') userDetailsForm : FormGroup;
 
@@ -25,6 +26,7 @@ export class UserAddPageComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     setTimeout(() => {
+      this.stepForms = [this.accountForm, this.userDetailsForm];
       this.stepper = this.stepperComponent.stepper;
       console.log("UserAddPageComponent :: stepperComponent value: ", this.stepperComponent);
       console.log("UserAddPageComponent :: Stepper value: ", this.stepper);
