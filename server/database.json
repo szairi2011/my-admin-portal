@@ -293,6 +293,13 @@
       "description": "Ask Damien to add the SLTP topic progress to the weekly Ops. meeting",
       "time": "15:11",
       "isComplete": false
+    },
+    {
+      "id": "9b750d43-7d0d-40f0-bd61-609f42944340",
+      "title": "Sameh :: check Sameh health condition following the emergency ...",
+      "description": "",
+      "time": "10:33",
+      "isComplete": false
     }
   ],
   "users": [

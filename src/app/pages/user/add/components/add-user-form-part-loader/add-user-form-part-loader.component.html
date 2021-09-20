@@ -1,6 +1,16 @@
-
 <ng-container *ngIf="stepTemplateRefs else loading">
-  <ng-container  *ngTemplateOutlet="stepTemplateRefs[stepper?.selectedIndex]"></ng-container>
+  <mat-card class="add-user-form-part-loader-card">
+    <mat-card-content class="content">
+      <div class="content-outer-wrapper">
+        <mat-card-title class="content-title">
+          {{components[stepper?.selectedIndex]?.title}}
+        </mat-card-title>
+        <div class="add-form-part-wrapper">
+          <ng-container *ngTemplateOutlet="stepTemplateRefs[stepper?.selectedIndex]"></ng-container>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </ng-container>
 
 <ng-template #loading>

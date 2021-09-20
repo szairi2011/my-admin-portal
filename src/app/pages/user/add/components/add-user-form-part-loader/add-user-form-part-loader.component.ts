@@ -15,6 +15,8 @@ export class AddUserFormPartLoaderComponent implements OnInit, AfterViewInit {
 
   stepTemplateRefs: TemplateRef<any>[];
 
+  components: IAddPartComponent[];
+
   @ViewChild(AddUserAccountComponent) accountComponent: AddUserAccountComponent;
 
   @ViewChild(AddUserDetailsComponent) detailsComponent: AddUserDetailsComponent;
@@ -30,10 +32,18 @@ export class AddUserFormPartLoaderComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     setTimeout(
-      () => this.stepTemplateRefs = [
+      () => {
+        this.stepTemplateRefs = [
           this.accountComponent.add_account,
           this.detailsComponent.user_details
-        ]
+        ];
+
+        this.components = [this.accountComponent, this.detailsComponent]
+      }
     )
   }
+}
+
+export interface IAddPartComponent {
+  title: string;
 }
