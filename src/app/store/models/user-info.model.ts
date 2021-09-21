@@ -2,11 +2,17 @@ import { channels } from "src/app/consts";
 
 export interface UserInfo {
   id: string;
-  firstname: string;
-  lastname: string;
+  // Account
   username: string;
   password: string;
   email: string;
+  // User details
+  firstname: string;
+  lastname: string;
+  country?: string;
+  city?: string;
+  address?: string;
+  // Business details
   company?: string;
   role?: string;
   notify?: boolean;

@@ -24,7 +24,12 @@ export class AddUserDetailsComponent implements OnInit, IAddFormPartComponent {
 
   ngOnInit(): void {
     this.addUserDetailsForm = this.fb.group({
-      firstname: ['', Validators.required]
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
+      contact_number: null,
+      email: ['', [Validators.required, Validators.email] ],
+      country: null,
+      address: null,
     });
   }
 
