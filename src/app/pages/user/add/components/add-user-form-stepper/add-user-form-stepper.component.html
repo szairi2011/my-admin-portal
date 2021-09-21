@@ -6,7 +6,11 @@
     </mat-step>
 
     <mat-step [stepControl]="stepForms[1]" state="identity">
-      <ng-template matStepLabel>Create user details</ng-template>
+      <ng-template matStepLabel>User Details</ng-template>
+    </mat-step>
+
+    <mat-step [stepControl]="stepForms[2]" state="business">
+      <ng-template matStepLabel>Business Details</ng-template>
     </mat-step>
   </ng-container>
 
@@ -16,6 +20,10 @@
   </ng-template>
   <ng-template matStepperIcon="identity">
     <mat-icon class=".add-user-step-icon">perm_identity</mat-icon>
+  </ng-template>
+  <ng-template matStepperIcon="business">
+    <!-- <mat-icon class=".add-user-step-icon">add_business</mat-icon> -->
+    <mat-icon class=".add-user-step-icon">work</mat-icon>
   </ng-template>
 
 </mat-horizontal-stepper>

@@ -20,6 +20,7 @@ export class UserAddPageComponent implements OnInit, AfterViewInit {
   stepForms: FormGroup[];
   @ViewChild(AddUserFormPartLoaderComponent) loaderComponent : AddUserFormPartLoaderComponent;
 
+
   ngOnInit(): void {
 
   }
@@ -28,11 +29,12 @@ export class UserAddPageComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.stepForms = [
         this.loaderComponent.accountComponent.addAccountForm,
-        this.loaderComponent.detailsComponent.addUserDetailsForm
+        this.loaderComponent.detailsComponent.addUserDetailsForm,
+        this.loaderComponent.businessComponent.addBusinessDetailsForm
       ];
       this.stepper = this.stepperComponent.stepper;
-      console.log("UserAddPageComponent :: stepperComponent value: ", this.stepperComponent);
-      console.log("UserAddPageComponent :: Stepper value: ", this.stepper);
+      // console.log("UserAddPageComponent :: stepperComponent value: ", this.stepperComponent);
+      // console.log("UserAddPageComponent :: Stepper value: ", this.stepper);
     });
 
   }

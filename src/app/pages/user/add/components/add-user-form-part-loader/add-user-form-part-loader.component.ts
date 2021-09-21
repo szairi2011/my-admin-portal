@@ -2,7 +2,7 @@ import { MatHorizontalStepper } from '@angular/material/stepper';
 import { FormBuilder } from '@angular/forms';
 import { Component, Input, OnInit, TemplateRef, ViewChild, AfterViewInit } from '@angular/core';
 import { IAddFormPartComponent } from '../../models';
-import { AddUserAccountComponent, AddUserDetailsComponent } from '../form-parts';
+import { AddUserAccountComponent, AddUserBusinessDetailsComponent, AddUserDetailsComponent } from '../form-parts';
 
 @Component({
   selector: 'app-add-user-form-part-loader',
@@ -21,6 +21,8 @@ export class AddUserFormPartLoaderComponent implements OnInit, AfterViewInit {
 
   @ViewChild(AddUserDetailsComponent) detailsComponent: AddUserDetailsComponent;
 
+  @ViewChild(AddUserBusinessDetailsComponent) businessComponent: AddUserBusinessDetailsComponent;
+
   constructor(
     private fb: FormBuilder
   ) { }
@@ -35,10 +37,11 @@ export class AddUserFormPartLoaderComponent implements OnInit, AfterViewInit {
       () => {
         this.stepTemplateRefs = [
           this.accountComponent.add_account,
-          this.detailsComponent.user_details
+          this.detailsComponent.user_details,
+          this.businessComponent.business_details,
         ];
 
-        this.components = [this.accountComponent, this.detailsComponent]
+        this.components = [this.accountComponent, this.detailsComponent, this.businessComponent];
       }
     )
   }

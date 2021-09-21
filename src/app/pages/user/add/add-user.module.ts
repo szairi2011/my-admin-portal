@@ -22,6 +22,7 @@ import { AddUserFormStepperComponent } from './components/add-user-form-stepper/
 import { AddUserFormPartLoaderComponent } from './components/add-user-form-part-loader/add-user-form-part-loader.component';
 import { AddUserAccountComponent } from './components/form-parts/add-user-account/add-user-account.component';
 import { AddUserDetailsComponent } from './components/form-parts/add-user-details/add-user-details.component';
+import { AddUserBusinessDetailsComponent } from './components/form-parts/add-user-business-details/add-user-business-details.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { AddUserDetailsComponent } from './components/form-parts/add-user-detail
     AddUserFormStepperComponent,
     AddUserFormPartLoaderComponent,
     AddUserAccountComponent,
-    AddUserDetailsComponent
+    AddUserDetailsComponent,
+    AddUserBusinessDetailsComponent
   ],
   imports: [
     CommonModule,

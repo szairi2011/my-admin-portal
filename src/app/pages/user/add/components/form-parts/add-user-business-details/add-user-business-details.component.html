@@ -1,0 +1,17 @@
+<ng-template #add_business_details>
+  <div class="add-form-wrapper">
+
+    <form [formGroup]="addBusinessDetailsForm">
+      <!-- Company -->
+      <mat-form-field class="form-item" appearance="outline">
+        <mat-label>Company</mat-label>
+        <input matInput placeholder="Company" type="text" formControlName="company" required>
+        <mat-hint>Enter the name of your company or institution</mat-hint>
+      </mat-form-field>
+      <div class="buttons-wrapper">
+        <button mat-stroked-button color="primary" (click)="stepper.previous()">BACK</button>
+        <button mat-flat-button color="primary" (click)="stepper.next()">NEXT</button>
+      </div>
+    </form>
+  </div>
+</ng-template>
