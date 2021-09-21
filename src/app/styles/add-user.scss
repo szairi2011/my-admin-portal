@@ -6,3 +6,13 @@
   margin-bottom: 16px;
   width: 100%;
 }
+
+.next-button {
+  float: right;
+  text-transform: uppercase;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+}

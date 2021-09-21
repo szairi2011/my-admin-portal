@@ -1,14 +1,17 @@
+
+
 import { Router } from '@angular/router';
 import { Update } from '@ngrx/entity';
 import { AppState } from './../../../../../../store/index';
 import { Store } from '@ngrx/store';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
-import { IEditFormPartComponent, UserRole } from '../../../models';
+import { IEditFormPartComponent} from '../../../models';
 import { selectLoggedInUserInfo, selectUserById } from 'src/app/store/selectors';
 import { UserInfo } from 'src/app/store/models';
 import { updateUserInfo } from 'src/app/store/actions';
 import { routes } from 'src/app/consts';
+import { user_roles } from 'src/app/pages/user/common';
 
 @Component({
   selector: 'app-edit-user-account',
@@ -21,22 +24,11 @@ export class EditUserAccountComponent implements OnInit, IEditFormPartComponent 
 
   editAccountForm: FormGroup;
 
-  // navUrl: string;
-
   user: UserInfo;
 
   routes: routes;
 
-  userRoles: UserRole[] = [
-    {
-      viewName: 'User',
-      value: 'user'
-    },
-    {
-      viewName: 'Admin',
-      value: 'admin'
-    }
-  ];
+  userRoles = user_roles;
 
   selectedRole: string;
 

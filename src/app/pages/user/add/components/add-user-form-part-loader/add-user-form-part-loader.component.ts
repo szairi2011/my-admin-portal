@@ -1,8 +1,8 @@
-import { AddUserDetailsComponent } from './../form-parts/add-user-details/add-user-details.component';
-import { AddUserAccountComponent } from './../form-parts/add-user-account/add-user-account.component';
 import { MatHorizontalStepper } from '@angular/material/stepper';
 import { FormBuilder } from '@angular/forms';
 import { Component, Input, OnInit, TemplateRef, ViewChild, AfterViewInit } from '@angular/core';
+import { IAddFormPartComponent } from '../../models';
+import { AddUserAccountComponent, AddUserDetailsComponent } from '../form-parts';
 
 @Component({
   selector: 'app-add-user-form-part-loader',
@@ -15,7 +15,7 @@ export class AddUserFormPartLoaderComponent implements OnInit, AfterViewInit {
 
   stepTemplateRefs: TemplateRef<any>[];
 
-  components: IAddPartComponent[];
+  components: IAddFormPartComponent[];
 
   @ViewChild(AddUserAccountComponent) accountComponent: AddUserAccountComponent;
 
@@ -42,8 +42,4 @@ export class AddUserFormPartLoaderComponent implements OnInit, AfterViewInit {
       }
     )
   }
-}
-
-export interface IAddPartComponent {
-  title: string;
 }

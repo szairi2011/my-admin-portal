@@ -6,8 +6,8 @@ import { Store } from '@ngrx/store';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Component, OnInit, Input } from '@angular/core';
 import { UserInfo } from 'src/app/store/models';
-import { UserRole } from '../../../models';
 import { AppState } from 'src/app/store';
+import { user_roles } from 'src/app/pages/user/common';
 
 @Component({
   selector: 'app-edit-user-settings',
@@ -18,22 +18,11 @@ export class EditUserSettingsComponent implements OnInit {
 
   @Input() data?: any;
 
-  // navUrl: string;
-
   user: UserInfo;
 
   editSettingsForm: FormGroup;
 
-  userRoles: UserRole[] = [
-    {
-      viewName: 'User',
-      value: 'user'
-    },
-    {
-      viewName: 'Admin',
-      value: 'admin'
-    }
-  ];
+  userRoles = user_roles;
 
   selectedRole: string;
 

@@ -7,9 +7,9 @@
         <mat-label>Firstname</mat-label>
         <input matInput placeholder="Firtsname" type="text" formControlName="firstname" required>
       </mat-form-field>
-      <div>
-        <button mat-button (click)="stepper.previous()">Back</button>
-        <button mat-button (click)="stepper.next()">Next</button>
+      <div class="buttons-wrapper">
+        <button mat-stroked-button color="primary" (click)="stepper.previous()">BACK</button>
+        <button mat-flat-button color="primary" (click)="stepper.next()">NEXT</button>
       </div>
     </form>
   </div>
