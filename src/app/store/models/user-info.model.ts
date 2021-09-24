@@ -6,6 +6,7 @@ export interface UserInfo {
   username: string;
   password: string;
   email: string;
+  phone?: string;
   // User details
   firstname: string;
   lastname: string;
@@ -14,6 +15,8 @@ export interface UserInfo {
   address?: string;
   // Business details
   company?: string;
+  business_email?: string,
+  business_phone?: string,
   role?: string;
   notify?: boolean;
   com_channels?: channels[];

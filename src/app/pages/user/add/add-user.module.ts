@@ -1,3 +1,4 @@
+import { AddUserService } from './services/add-user.service';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
@@ -50,6 +51,9 @@ import { AddUserBusinessDetailsComponent } from './components/form-parts/add-use
     MatSlideToggleModule,
     MatStepperModule,
     RouterModule
+  ],
+  providers: [
+    AddUserService
   ]
 })
 export class AddUserModule { }
