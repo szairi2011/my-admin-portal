@@ -173,7 +173,7 @@
       "title": "Manel :: Silver Bravo award",
       "description": "Request a silver bravo award for Manel ...\n   - Request sent, waiting for confirmation from Jihen ...",
       "time": "11:26",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "f95397ac-a2e5-4f08-965c-1a006ed83229",
@@ -271,21 +271,21 @@
       "title": "Sameh :: Conge de maternite verifier process, duree ",
       "description": "Confirmer la duree et le process a Clement",
       "time": "10:34",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "f7cf8142-e0b7-4e4a-9245-c4de0f387d27",
       "title": "Backoffice move :: Send resource names to Damien ",
       "description": "",
       "time": "11:54",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "25545a34-7ed3-4562-8a80-bd1895f55cc8",
       "title": "Mettre 2 Focus area dans GLINT",
       "description": "",
       "time": "12:0",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "5c936660-c608-4920-9d0e-129a51912dba",
@@ -299,6 +299,13 @@
       "title": "Sameh :: check Sameh health condition following the emergency ...",
       "description": "",
       "time": "10:33",
+      "isComplete": false
+    },
+    {
+      "id": "5e9a9cb5-865c-408f-88bf-f679e64b2de5",
+      "title": "Sameh :: Request a gold bravo award for Sameh ...",
+      "description": "",
+      "time": "14:31",
       "isComplete": false
     }
   ],

@@ -18,6 +18,13 @@ export interface UserInfo {
   business_email?: string,
   business_phone?: string,
   role?: string;
+  // Social network
+  facebook?: string,
+  twitter?: string,
+  instagram?: string,
+  company_contact?: string,
+  github?: string,
+
   notify?: boolean;
   com_channels?: channels[];
   skills?: string[];

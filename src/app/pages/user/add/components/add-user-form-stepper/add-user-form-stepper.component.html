@@ -12,6 +12,10 @@
     <mat-step [stepControl]="stepForms[2]" state="business">
       <ng-template matStepLabel>Business Details</ng-template>
     </mat-step>
+
+    <mat-step [stepControl]="stepForms[3]" state="social">
+      <ng-template matStepLabel>Social Network</ng-template>
+    </mat-step>
   </ng-container>
 
   <!-- Override default step icons -->
@@ -25,7 +29,8 @@
     <!-- <mat-icon class=".add-user-step-icon">add_business</mat-icon> -->
     <mat-icon class=".add-user-step-icon">work</mat-icon>
   </ng-template>
+  <ng-template matStepperIcon="social">
+    <mat-icon class=".add-user-step-icon">people</mat-icon>
+  </ng-template>
 
 </mat-horizontal-stepper>
-
-

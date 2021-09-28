@@ -30,7 +30,8 @@ export class UserAddPageComponent implements OnInit, AfterViewInit {
       this.stepForms = [
         this.loaderComponent.accountComponent.addAccountForm,
         this.loaderComponent.detailsComponent.addUserDetailsForm,
-        this.loaderComponent.businessComponent.addBusinessDetailsForm
+        this.loaderComponent.businessComponent.addBusinessDetailsForm,
+        this.loaderComponent.socialNetworkComponent.addSocialNetworkForm
       ];
       this.stepper = this.stepperComponent.stepper;
       // console.log("UserAddPageComponent :: stepperComponent value: ", this.stepperComponent);
