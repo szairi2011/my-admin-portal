@@ -1,9 +1,14 @@
+import { filter } from 'rxjs/operators';
 import { IAddFormPartComponent } from './../../../models/add-form-part.component';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { MatHorizontalStepper } from '@angular/material/stepper';
 import { Component, OnInit, Input, ViewChild, TemplateRef } from '@angular/core';
 import { UserInfo } from 'src/app/store/models';
 import { AddUserService } from '../../../services';
+import { Store } from '@ngrx/store';
+import { AppComponent } from 'src/app/app.component';
+import { addUserInfo } from 'src/app/store/actions';
+import * as uuid from 'uuid';
 
 @Component({
   selector: 'app-add-user-social-network-details',
@@ -22,7 +27,8 @@ export class AddUserSocialNetworkDetailsComponent implements OnInit, IAddFormPar
 
   constructor(
     private fb: FormBuilder,
-    private addUserService: AddUserService
+    private addUserService: AddUserService,
+    private store: Store<AppComponent>
   ) { }
 
   ngOnInit(): void {
@@ -35,19 +41,32 @@ export class AddUserSocialNetworkDetailsComponent implements OnInit, IAddFormPar
     });
   }
 
-  // perform partial update on the buffered user
-  addSocialNetworkInfo() {
-    const socialNetworkInfo: Partial<UserInfo> = {
-      facebook: this.addSocialNetworkForm.get('facebook').value,
-      twitter: this.addSocialNetworkForm.get('twitter').value,
-      instagram: this.addSocialNetworkForm.get('instagram').value,
-      company_contact: this.addSocialNetworkForm.get('company_contact').value,
-      github: this.addSocialNetworkForm.get('github').value
+  // Submit only non empty buffered user properties
+  submit() {
+
+    let socialNetworkInfo = this.addSocialNetworkForm.value;
+
+    this.addUserService
+      .addBufferedInfo(socialNetworkInfo)
+        .subscribe((buffered_user) => {
+          this.cleanUp(buffered_user);
+          buffered_user = {id: uuid(), ... buffered_user};
+          // console.log("Cleaned up buffered user: ", buffered_user);
+          this.store.dispatch(addUserInfo(
+            {
+              userInfo: buffered_user
+            }
+          ));
+        });
+  }
+
+  cleanUp(pairs):Partial<UserInfo> {
+    for (let prop of Object.keys(pairs)) {
+      if ( !pairs[prop] ) {
+        delete pairs[prop];
+      }
     }
-
-    this.addUserService.addBufferedInfo(socialNetworkInfo);
-
-    this.stepper.next();
+    return pairs;
   }
 
 }
