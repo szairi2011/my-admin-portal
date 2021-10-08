@@ -48,21 +48,25 @@ export class AddUserSocialNetworkDetailsComponent implements OnInit, IAddFormPar
 
     this.addUserService
       .addBufferedInfo(socialNetworkInfo)
-        .subscribe((buffered_user) => {
-          this.cleanUp(buffered_user);
-          buffered_user = {id: uuid(), ... buffered_user};
-          // console.log("Cleaned up buffered user: ", buffered_user);
-          this.store.dispatch(addUserInfo(
-            {
-              userInfo: buffered_user
-            }
-          ));
-        });
+      .subscribe((buffered_user) => {
+        this.cleanUp(buffered_user);
+        buffered_user = { id: uuid(), ...buffered_user };
+        // console.log("Cleaned up buffered user: ", buffered_user);
+        this.store.dispatch(addUserInfo(
+          {
+            userInfo: buffered_user
+          }
+        ));
+      });
   }
 
-  cleanUp(pairs):Partial<UserInfo> {
+  /*
+    For a tidier DB records, we save a clean json object of the user info by
+    removing properties having null or empty string values
+  */
+  cleanUp(pairs): Partial<UserInfo> {
     for (let prop of Object.keys(pairs)) {
-      if ( !pairs[prop] ) {
+      if (!pairs[prop]) {
         delete pairs[prop];
       }
     }

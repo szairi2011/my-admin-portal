@@ -313,14 +313,14 @@
       "title": "SGW team :: change the workspace profile for the SGW team",
       "description": "Change profile for those who have requested to move from Club -> Home profile in WD",
       "time": "16:18",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "e9513071-baa0-4824-80e9-342ec3e27f5e",
       "title": "Back Office move :: Contact Hamda to check his plan for the onboarding ...",
       "description": "Damien asked to double check with Hamda about the transition including the onboarding ...",
       "time": "16:25",
-      "isComplete": false
+      "isComplete": true
     },
     {
       "id": "23b9320f-12b2-4e11-8cde-4c0a45c4eda6",
