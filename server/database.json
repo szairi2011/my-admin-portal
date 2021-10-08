@@ -307,6 +307,27 @@
       "description": "",
       "time": "14:31",
       "isComplete": false
+    },
+    {
+      "id": "58d42ab0-b789-467e-a32d-7bf9ffd8802a",
+      "title": "SGW team :: change the workspace profile for the SGW team",
+      "description": "Change profile for those who have requested to move from Club -> Home profile in WD",
+      "time": "16:18",
+      "isComplete": false
+    },
+    {
+      "id": "e9513071-baa0-4824-80e9-342ec3e27f5e",
+      "title": "Back Office move :: Contact Hamda to check his plan for the onboarding ...",
+      "description": "Damien asked to double check with Hamda about the transition including the onboarding ...",
+      "time": "16:25",
+      "isComplete": false
+    },
+    {
+      "id": "23b9320f-12b2-4e11-8cde-4c0a45c4eda6",
+      "title": "ADP increase for Imen Touaibi",
+      "description": "Houssem will send an email to Kais. Once approved, we can create the ticket. ",
+      "time": "18:10",
+      "isComplete": false
     }
   ],
   "users": [
@@ -566,6 +587,18 @@
     {
       "id": "5a445360-3d12-46af-99e8-c310ec49cc0d",
       "facebook": " testing10"
+    },
+    {
+      "id": "26255eb3-aaff-4689-9c88-342993638558",
+      "facebook": " testing11"
+    },
+    {
+      "id": "5b33e543-eda2-4486-a492-1508739b43db",
+      "facebook": " testing12"
+    },
+    {
+      "id": "0c0b46c5-eead-46ca-87c9-60cf784d3c8d",
+      "role": "user"
     }
   ],
   "categories": [
