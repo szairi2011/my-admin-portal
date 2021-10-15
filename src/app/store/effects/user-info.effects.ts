@@ -5,6 +5,7 @@ import * as UserInfoActions from 'src/app/store/actions/user-info.actions';
 import { AuthService } from 'src/app/pages/auth/services';
 import { of } from 'rxjs';
 import { EditUserService } from 'src/app/pages/user/edit/services';
+import { UserListService } from 'src/app/pages/user/list/services/user-list.service';
 
 
 
@@ -14,7 +15,8 @@ export class UserInfoEffects {
   constructor(
     private actions$: Actions,
     private authService: AuthService,
-    private editUserService: EditUserService) { }
+    private editUserService: EditUserService,
+    private userListService: UserListService) { }
 
   addUserInfoEffect = createEffect(
     () => this.actions$.pipe(
@@ -60,6 +62,19 @@ export class UserInfoEffects {
           .pipe(
             map((_updatedUser) => UserInfoActions.updateUserInfoSuccess({ updatedUser: _updatedUser })),
             catchError((error: Error) => of(UserInfoActions.updateUserInfoFailure({ error: error })))
+          )
+      )
+    )
+  );
+
+  loadAllUsersEffect = createEffect(
+    () => this.actions$.pipe(
+      ofType(UserInfoActions.loadAllUsers),
+      mergeMap(
+        () => this.userListService.loadAllUsers()
+          .pipe(
+            map((users) => UserInfoActions.loadAllUsersSuccess({ users: users })),
+            catchError((error: Error) => of(UserInfoActions.loadAllUsersFailure({ error: error })))
           )
       )
     )
