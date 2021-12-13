@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "generate": "node ./server/generate.js > ./server/database.json",
-    "server": "json-server --watch ./server/database.json",
+    "server": "json-server --watch ./server/database.json --host 0.0.0.0",
     "dev": "concurrently --kill-others \"npm run server\" \"npm run start\""
   },
   "private": true,
