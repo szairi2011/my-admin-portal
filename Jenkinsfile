@@ -26,7 +26,9 @@ pipeline{
               emailext to: 'test@jenkins',
                       recipientProviders: [developers(), requestor()],
                       subject: "Job: \'${JOB_NAME}\' -- Build: ${BUILD_NUMBER} -- Result: ${currentBuild.result}",
-                      body: 'Please go to ${BUILD_URL} and verify the build ...'
+                      body: 'Please go to ${BUILD_URL} and verify the build ...',
+                      attachLog: true,
+                      compressLog: true
 
             }
             // changed {
