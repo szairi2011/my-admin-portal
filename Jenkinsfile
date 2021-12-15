@@ -5,6 +5,10 @@ pipeline{
       nodejs 'node'
     }
 
+    triggers {
+      pollSCM 'H/15 * * * *'
+    }
+
     stages{
         /*stage("Git checkout"){
             steps{
@@ -16,6 +20,18 @@ pipeline{
           steps {
             // Build ng app
             sh "npm install"
+          }
+          post {
+            always {
+              emailext to: 'test@jenkins',
+                      recipientProviders: [developers(), requestor()],
+                      subject: "Job: \'${JOB_NAME}\' -- Build: ${BUILD_NUMBER} -- Result: ${currentBuild.result}",
+                      body: 'Please go to ${BUILD_URL} and verify the build ...'
+
+            }
+            // changed {
+            //   emailext body: 'Please go to ${BUILD_URL} and verify the build ...', recipientProviders: [developers(), requestor()], subject: 'Job: ${JOB_NAME} -- Build: ${BUILD_NUMBER} -- Result: ${currentBuild.result}', to: 'test@jenkins'
+            // }
           }
         }
         stage('Deploy') {
