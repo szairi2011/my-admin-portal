@@ -24,7 +24,7 @@ pipeline{
           post {
             always {
               emailext to: 'test@jenkins',
-                      recipientProviders: [developers(), requestor()],
+                      // recipientProviders: [developers(), requestor()],
                       subject: "Job: \'${JOB_NAME}\' -- Build: ${BUILD_NUMBER} -- Result: ${currentBuild.result}",
                       body: 'Please go to ${BUILD_URL} and verify the build ...'
 
