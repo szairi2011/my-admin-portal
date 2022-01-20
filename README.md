@@ -81,7 +81,7 @@ To install Moment for Angular Material, we can follow below steps:
 
 To test your Angular build locally:
 
-## Build your app: ng build --prod
+## Build your app locally: ng build --prod
 We may need to build a stable release and deploy the app, while switching to a different Git branch to continue improving the app and avoid ops interruptions untill we get a CI ready for this app. For this: 
 1. Make sure to check out to master branch first, than merge from any previous branching if needed
 2. Build the app usng following command: > ng build for a dev dist. or > ng build --prod for a production distribution
@@ -89,6 +89,34 @@ We may need to build a stable release and deploy the app, while switching to a d
 3. cd (change directory) into the the build location and run the app by typing command > http-server
 4. Open http-server url appending /index.html to it, should look something like this http://127.0.0.1:8080/index.html
 
+
+## Git clone the application from a Linux VM:
+We will use the ssh protocol to clone the project as follows
+1.  Create the public/private ssh key pair from the linux environemnt:
+  $ `ssh-geygen -t rsa`
+  Accept all the defaults, and this will copy the private key under id_rsa and the public key under id_rsa.pub
+2. From the Github repository settings page click on "Deploy keys" from left nav, e.g. https://github.com/szairi2011/my-admin-portal/settings/keys, then click on "Add deploy key" button, and finally paste the previously generated public rsa key; give it a meaningful name to remember it
+3. Back to the Linux VM, we will add the private key to the ssh-agent:
+  - Make sure the ssh agent is up and running first -- $ `eval $(ssh-agent)`
+  - Then add the private key to ssh -- $ `ssh-add .ssh/id_rsa`
+4. Create an ssh config file under the ssh directory ~/.ssh/, and copy the content below -- this will allow ssh to use a 443 for the ssh port when connecting to Github later:
+  $ cat > .ssh/config
+      Host github.com
+      User git
+      Hostname ssh.github.com
+      PreferredAuthentications publickey
+      IdentityFile ~/.ssh/id_rsa
+      Port 443
+
+5. Now clone the project:
+    $ `git clone git@github.com:szairi2011/my-admin-portal.git`
+
+NB: The folowing two links are quite helpful if you can't follow above steps to clone the project:
+  - https://www.toolsqa.com/git/clone-repository-using-ssh/
+  - https://stackoverflow.com/questions/15589682/ssh-connect-to-host-github-com-port-22-connection-timed-out
+
+## Git clone the application from a Jenkins job:
+	To be able to checkout private projects from Github, an ssh credential needs to be set up for Jenkins (i.e. rsa private key) and Github (i.e. rsa public key). The following url is used to highlight the steps -- https://medium.com/appgambit/ssh-authentication-between-github-and-jenkins-d873dd138db0
 
 ## Useful Tutorials
 
