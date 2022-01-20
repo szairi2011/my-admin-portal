@@ -3,9 +3,19 @@ import { Update } from '@ngrx/entity';
 
 import { UserInfo } from '../models/user-info.model';
 
-export const loadUserInfos = createAction(
-  '[UserInfo/API] Load UserInfos',
-  props<{ userInfos: UserInfo[] }>()
+// Load all users
+export const loadAllUsers = createAction(
+  '[UserInfo/API] Load All Users'
+);
+
+export const loadAllUsersSuccess = createAction(
+  '[UserInfo/API] Load All Users success',
+  props<{ users: UserInfo[] }>()
+);
+
+export const loadAllUsersFailure = createAction(
+  '[UserInfo/API] Load All Users success',
+  props<{ error: Error }>()
 );
 
 // Create a new user actions including success and failure

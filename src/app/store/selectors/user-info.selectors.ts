@@ -4,8 +4,8 @@ import { userInfoAdapter, userInfoFeatureKey, UserInfoState } from '../reducers'
 // Get basic entity selectors first
 const {
   selectIds: _selectIds,
-  selectAll: _selectAll, // Returns an array of all UserTask items
-  selectEntities: _selectEntities, // Returns a dictionary of {key, UserTask object}
+  selectAll: _selectAll, // Returns an array of all users
+  selectEntities: _selectEntities, // Returns a dictionary of {key, Userinfo object}
   selectTotal: _selectTotal // Returns total number of items
 } = userInfoAdapter.getSelectors();
 

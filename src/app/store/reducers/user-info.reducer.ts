@@ -131,15 +131,43 @@ export const userInfoReducer = createReducer(
   on(UserInfoActions.updateUserInfos,
     (state, action) => userInfoAdapter.updateMany(action.userInfos, state)
   ),
+
+  // Load all users
+  on(UserInfoActions.loadAllUsers,
+    (state) => {
+      return {
+        ...state,
+        loading: false
+      };
+    }
+  ),
+
+  on(UserInfoActions.loadAllUsersSuccess,
+    (state, action) => userInfoAdapter.setAll(action.users, {
+      ...state,
+      loading: false
+    })
+  ),
+
+  on(UserInfoActions.loadAllUsersFailure,
+    (state, action) => {
+      return {
+        ...state,
+        loading: false,
+        error: action.error
+      };
+    }
+  ),
+
+
+
   on(UserInfoActions.deleteUserInfo,
     (state, action) => userInfoAdapter.removeOne(action.id, state)
   ),
   on(UserInfoActions.deleteUserInfos,
     (state, action) => userInfoAdapter.removeMany(action.ids, state)
   ),
-  on(UserInfoActions.loadUserInfos,
-    (state, action) => userInfoAdapter.setAll(action.userInfos, state)
-  ),
+
   on(UserInfoActions.clearUserInfos,
     state => userInfoAdapter.removeAll(state)
   ),
