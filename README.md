@@ -99,7 +99,7 @@ We will use the ssh protocol to clone the project as follows
 3. Back to the Linux VM, we will add the private key to the ssh-agent:
   - Make sure the ssh agent is up and running first -- $ `eval $(ssh-agent)`
   - Then add the private key to ssh -- $ `ssh-add .ssh/id_rsa`
-4. Create an ssh config file under the ssh directory ~/.ssh/, and copy the content below -- this will allow ssh to use a 443 for the ssh port when connecting to Github later:
+4. Create an ssh config file under the ssh directory ~/.ssh/config, and copy the content below -- this will allow ssh to use a 443 for the ssh port when connecting to Github later:
   $ cat > .ssh/config
       Host github.com
       User git

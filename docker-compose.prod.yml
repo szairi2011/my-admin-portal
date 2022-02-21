@@ -10,24 +10,40 @@ services:
     environment:
       NODE_ENV: production
     ports:
-      - 8080:80
+      - 8080:80 # Port-forwarding to nginx container who is listening on port 80
       - 443:443
     depends_on:
-      - node_server
+      # - node_server
+      - backend
     networks:
       - myadmin-portal-network
    # command: ["node", "--inspect=0.0.0.0:9229", "index.js"]
 
-  node_server:
+  # node_server:
+  backend:
     container_name: node-server
     image: soulou2019/node-server
     build:
       context: ./server
       dockerfile: node.server.dockerfile
     ports:
-      - 3000:3000
+      - 80:3000
     networks:
       - myadmin-portal-network
+
+  # Disabled in case someone is running this on Windows (OK to uncomment if on Mac/Linux)
+  # cadvisor:
+  #   container_name: cadvisor
+  #   image: google/cadvisor
+  #   volumes:
+  #     - /:/rootfs:ro
+  #     - /var/run:/var/run:rw
+  #     - /sys:/sys:ro
+  #     - /var/lib/docker/:/var/lib/docker:ro
+  #   ports:
+  #     - "8081:8080"
+  #   networks:
+  #     - myadmin-portal-network
 
 networks:
   myadmin-portal-network:
