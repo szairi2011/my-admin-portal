@@ -41,15 +41,16 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name:  fronend-service
+  name:  frontend-service
   namespace: misc
 spec:
   selector:
     app:  my-admin-frontend
-  type:  NodePort # Switch to Loadbalancer sevice if we are deploying to a cloud provider or if we have a cluster-level loadbalancing capability
+  type:  LoadBalancer # Switch to Loadbalancer sevice if we are deploying to a cloud provider or if we have a cluster-level loadbalancing capability
   ports:
   - protocol: TCP # Default is TCP anyway
-    port:  80
+    #port:  31066
+    port: 8081
     targetPort:  80
 
 ---
