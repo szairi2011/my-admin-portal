@@ -16,7 +16,7 @@ metadata:
   name: my-admin-portal-frontend
   namespace: misc # Deploy all child artifacts (pod, rs, etc) to 'misc' ns
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: my-admin-frontend
@@ -37,7 +37,7 @@ spec:
         ports:
         - containerPort: 80
 ---
-### Define the Angular app nodeport Service desired state
+### Define the Angular app nodeport/loadbalancer Service desired state
 apiVersion: v1
 kind: Service
 metadata:
@@ -73,6 +73,7 @@ spec:
       containers:
       - name: node-server
         image: soulou2019/node-server
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "128Mi"
@@ -90,7 +91,7 @@ metadata:
 spec:
   selector:
     app:  backend
-  type:  NodePort
+  type:  ClusterIP
   ports:
   - port:  80
     targetPort:  3000

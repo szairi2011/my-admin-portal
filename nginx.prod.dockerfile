@@ -3,6 +3,11 @@ FROM node:10 as angular-builder
 
 WORKDIR /app
 COPY package.json package-lock.json ./
+
+# NB: Disable proxy settings if proxy is not needed
+RUN npm config set proxy http://10.49.98.4:8080
+RUN npm config set https-proxy http://10.49.98.4:8080
+
 # Install Angular npm dependencies on the image
 RUN npm install
 
@@ -24,4 +29,4 @@ FROM nginx:alpine
 
 # Keeping the runtime container size as small as possible
 COPY --from=angular-builder /app/dist /usr/share/nginx/html
-COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./conf/nginx.conf /etc/nginx/conf.d/default.conf

@@ -44,3 +44,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Running > nginx -t requires /logs/error.log file to validate the nginx conf
+/logs

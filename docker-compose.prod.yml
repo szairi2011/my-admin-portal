@@ -1,7 +1,7 @@
 version: '3.7'
 
 services:
-  nginx:
+  frontend-service:
     container_name: angular-nginx
     image: soulou2019/angular-nginx
     build:
@@ -14,20 +14,21 @@ services:
       - 443:443
     depends_on:
       # - node_server
-      - backend
+      - backend-service
     networks:
       - myadmin-portal-network
    # command: ["node", "--inspect=0.0.0.0:9229", "index.js"]
 
   # node_server:
-  backend:
+  backend-service:
     container_name: node-server
     image: soulou2019/node-server
     build:
       context: ./server
       dockerfile: node.server.dockerfile
     ports:
-      - 80:3000
+      # - 80:3000
+      - 80:80
     networks:
       - myadmin-portal-network
 
