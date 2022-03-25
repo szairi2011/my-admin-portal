@@ -43,7 +43,10 @@ kind: Service
 metadata:
   name:  frontend-service
   namespace: misc
+  annotations:
+    metallb.universe.tf/allow-shared-ip: "key-to-share-10.7.158.149"
 spec:
+  loadBalancerIP: 10.7.158.149
   selector:
     app:  my-admin-frontend
   type:  LoadBalancer # Switch to Loadbalancer sevice if we are deploying to a cloud provider or if we have a cluster-level loadbalancing capability
@@ -79,7 +82,8 @@ spec:
             memory: "128Mi"
             cpu: "500m" # i.e. 500 millicpu => 50% max of cpu resource usage allowed per container of this type
         ports:
-          - containerPort: 3000
+          # - containerPort: 3000
+          - containerPort: 80
 
 ---
 # Define the backend service desired state
@@ -94,4 +98,5 @@ spec:
   type:  ClusterIP
   ports:
   - port:  80
-    targetPort:  3000
+    # targetPort:  3000
+    targetPort:  80

@@ -1,0 +1,27 @@
+# Angular app Deployment desired state
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-admin-portal-frontend
+  # namespace: misc # Deploy all child artifacts (pod, rs, etc) to 'misc' ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-admin-frontend
+  template:
+    metadata:
+      #name: my-admin-frontend
+      labels:
+        app: my-admin-frontend
+    spec:
+      containers:
+      - name: my-admin-frontend
+        image: soulou2019/angular-nginx
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m" # i.e. 500 millicpu => 50% max of cpu resource usage allowed per container of this type
+        ports:
+        - containerPort: 80
