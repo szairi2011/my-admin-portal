@@ -8,6 +8,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppState } from 'src/app/store';
 import { selectLoggedInUserInfo } from 'src/app/store/selectors';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-header',
@@ -26,6 +27,8 @@ export class HeaderComponent implements OnInit {
 
   routes = routes;
 
+  app_title: String;
+
   constructor(
     private emailService: EmailService,
     private authService: AuthService,
@@ -35,6 +38,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.emails$ = this.emailService.loadEmails();
     this.user$ = this.store.select(selectLoggedInUserInfo);
+    this.app_title = environment.app_title;
   }
 
   toggleMenu() {

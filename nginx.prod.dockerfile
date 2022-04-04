@@ -30,3 +30,6 @@ FROM nginx:alpine
 # Keeping the runtime container size as small as possible
 COPY --from=angular-builder /app/dist /usr/share/nginx/html
 COPY ./conf/nginx.conf /etc/nginx/conf.d/default.conf
+
+# When the container starts, replace the env.js with values from environment variables thanks to the envsubst command
+CMD ["/bin/sh",  "-c",  "envsubst < /usr/share/nginx/html/my-admin-portal/assets/env.template.js > /usr/share/nginx/html/my-admin-portal/assets/env.js && exec nginx -g 'daemon off;'"]

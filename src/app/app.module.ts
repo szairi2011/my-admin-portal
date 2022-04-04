@@ -14,8 +14,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { MatCardModule } from '@angular/material/card';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { StoreDevModules } from './store/config/devtool.prod';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,9 @@ import { environment } from '../environments/environment';
     SharedModule,
     MatCardModule,
     StoreModule.forRoot(reducers, { metaReducers }),
-    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    // This module module will only load for Dev environments, making the build quicker, reducing its size on disk, and its runtime footprint
+    // check under -- https://ngohungphuc.wordpress.com/2020/02/26/turn-off-ngrxs-store-dev-tool-in-prod-mode/
+    StoreDevModules,
     EffectsModule.forRoot() // NB: It is mandatory to register a root effect to kisckstart the effects providers for other feature effects, otherwise effects won't work at start up
   ],
   providers: [],

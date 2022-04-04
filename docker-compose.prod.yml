@@ -9,6 +9,10 @@ services:
       dockerfile: nginx.prod.dockerfile
     environment:
       NODE_ENV: production
+      FRONTEND_NAME: admin-portal-prod
+      USERS_BACKEND_URL_SUFFIX: /api/users/
+      TASKS_BACKEND_URL_SUFFIX: /api/tasks/
+      APP_FRONTEND_VERSION: 1.0.1
     ports:
       - 8080:80 # Port-forwarding to nginx container who is listening on port 80
       - 443:443

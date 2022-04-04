@@ -19,6 +19,27 @@ spec:
       - name: my-admin-frontend
         image: soulou2019/angular-nginx
         imagePullPolicy: Always
+        env:
+          - name: USERS_BACKEND_URL_SUFFIX
+            valueFrom:
+              configMapKeyRef:
+                name: {{ .Release.Name }}-{{ .Chart.Name }}-config
+                key: users_backend_url_suffix
+          - name: TASKS_BACKEND_URL_SUFFIX
+            valueFrom:
+              configMapKeyRef:
+                name: {{ .Release.Name }}-{{ .Chart.Name }}-config
+                key: tasks_backend_url_suffix
+          - name: FRONTEND_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: {{ .Release.Name }}-{{ .Chart.Name }}-config
+                key: frontend_name
+          - name: APP_FRONTEND_VERSION
+            valueFrom:
+              configMapKeyRef:
+                name: {{ .Release.Name }}-{{ .Chart.Name }}-config
+                key: app_frontend_version
         resources:
           limits:
             memory: "128Mi"
