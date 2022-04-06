@@ -4,6 +4,9 @@ description: First draft of the chart with embedded backend API & DB, i.e. http-
 version: 1.2.0 # The chart structue has changed by moving to an umbrella structure so upgrading the chart version
 appVersion: "1.0.1"
 type: application
+keywords:
+  - "Admin portal"
+  - "Angular admin portal"
 
 # To deploy this helm chart, run below commands:
 # 1. > helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
@@ -13,3 +16,7 @@ type: application
 # To delete the chart release, we either delete the namespace,
 # or only uninstall the helm chart release:
 # helm uninstall admin-portal -n misc
+
+# To package the chart in a sub-folder called packaged, follow below steps:
+# Run > helm package .\helm\admin-portal-chart\ -d .\helm\admin-portal-chart\packaged
+# Add the chart repository index file > helm repo index
