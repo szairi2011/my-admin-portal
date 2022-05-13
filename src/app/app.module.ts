@@ -16,6 +16,8 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './store';
 import { environment } from '../environments/environment';
 import { StoreDevModules } from './store/config/devtool.prod';
+import { CalendarPageComponent } from './pages/calendar/containers/calendar-page/calendar-page.component';
+import { CalendarModule } from './pages/calendar/calendar.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { StoreDevModules } from './store/config/devtool.prod';
     AuthModule,
     DashboardModule,
     UserModule,
+    CalendarModule,
     SharedModule,
     MatCardModule,
     StoreModule.forRoot(reducers, { metaReducers }),

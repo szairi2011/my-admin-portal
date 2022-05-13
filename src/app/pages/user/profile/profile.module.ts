@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FullCalendarModule } from '@fullcalendar/angular';
-import interactionPlugin from '@fullcalendar/interaction';
-import dayGridPlugin from '@fullcalendar/daygrid';
 import { UserCalendarComponent } from './components/calendars/user-calendar/user-calendar.component';
 
 import { SharedModule } from 'src/app/shared/shared.module';
@@ -41,11 +38,6 @@ import { UserInfoService } from './services';
 import * as fromUserInfo from '../../../store/reducers/user-info.reducer';
 import { UserInfoEffects } from '../../../store/effects/user-info.effects';
 
-FullCalendarModule.registerPlugins([
-  interactionPlugin,
-  dayGridPlugin
-]);
-
 @NgModule({
   declarations: [
     ProfilePageComponent,
@@ -61,7 +53,6 @@ FullCalendarModule.registerPlugins([
   ],
   imports: [
     CommonModule,
-    FullCalendarModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
@@ -80,6 +71,9 @@ FullCalendarModule.registerPlugins([
     StoreModule.forFeature(fromUserTask.userTasksFeatureKey, fromUserTask.userTaskReducer),
     EffectsModule.forFeature([UserTaskEffects, UserInfoEffects]),
     StoreModule.forFeature(fromUserInfo.userInfoFeatureKey, fromUserInfo.userInfoReducer)
+  ],
+  exports: [
+    UserTasksComponent
   ],
   providers: [
     UserTaskService,

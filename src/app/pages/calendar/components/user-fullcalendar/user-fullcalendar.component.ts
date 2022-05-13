@@ -1,14 +1,19 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CalendarOptions, DateSelectArg, EventApi, EventClickArg } from '@fullcalendar/angular';
 import { INITIAL_EVENTS, createEventId } from './event_utils';
 
+
 @Component({
-  selector: 'app-user-calendar',
-  templateUrl: './user-calendar.component.html',
-  styleUrls: ['./user-calendar.component.scss']
+  selector: 'app-user-fullcalendar',
+  templateUrl: './user-fullcalendar.component.html',
+  styleUrls: ['./user-fullcalendar.component.scss']
 })
-export class UserCalendarComponent {
+export class UserFullCalendarComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
   calendarVisible = true;
   calendarOptions: CalendarOptions = {

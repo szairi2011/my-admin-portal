@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthPageComponent } from './pages/auth/containers/auth-page';
 import { AuthGuard } from './pages/auth/guards';
 import { DashboardPageComponent } from './pages/dashboard/containers/dashboard-page';
+import { CalendarPageComponent } from './pages/calendar/containers/calendar-page/calendar-page.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,13 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     component: DashboardPageComponent,
     data: { breadcrumb: 'dashboards' }
+  },
+  {
+    path: 'calendar',
+    pathMatch: 'full',
+    canActivate: [AuthGuard],
+    component: CalendarPageComponent,
+    data: { breadcrumb: 'calendar' }
   },
   {
     path: '404',
