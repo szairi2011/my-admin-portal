@@ -123,3 +123,8 @@ NB: The folowing two links are quite helpful if you can't follow above steps to 
 Tuto for this project is available under -- https://www.linkedin.com/learning/angular-material-design-2/
 
 Another interesting baseline course for Angular is available under -- https://www.linkedin.com/learning/angular-essential-training-2/
+
+## Fullcalendar integration
+Fullcalendar Angular library is used
+ - Many features are highlighted in 'https://fullcalendar.io/demos'
+ - For a code example covering many features, we can clone this project -- 'https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/angular/'

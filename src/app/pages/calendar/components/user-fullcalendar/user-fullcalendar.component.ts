@@ -1,80 +1,94 @@
-import { Component, OnInit } from '@angular/core';
-import { CalendarOptions, DateSelectArg, EventApi, EventClickArg } from '@fullcalendar/angular';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import {
+  CalendarOptions,
+  DateSelectArg,
+  EventApi,
+  EventClickArg,
+} from '@fullcalendar/angular';
 import { INITIAL_EVENTS, createEventId } from './event_utils';
-
 
 @Component({
   selector: 'app-user-fullcalendar',
   templateUrl: './user-fullcalendar.component.html',
-  styleUrls: ['./user-fullcalendar.component.scss']
+  styleUrls: ['./user-fullcalendar.component.scss'],
 })
-export class UserFullCalendarComponent implements OnInit {
+export class UserFullCalendarComponent implements OnInit, AfterViewInit {
+  calendarVisible: boolean;
+  calendarOptions: CalendarOptions;
+  currentEvents: EventApi[];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+    // setTimeout(() => {
+      this.calendarVisible = true;
+
+      this.calendarOptions = {
+        headerToolbar: {
+          left: 'prev, next, today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay,listweek',
+        },
+        initialView: 'dayGridMonth',
+        initialEvents: INITIAL_EVENTS,
+        weekends: true,
+        editable: true,
+        selectable: true,
+        selectMirror: true,
+        dayMaxEvents: true,
+        select: this.handleDateSelect.bind(this),
+        eventClick: this.handleEventClick.bind(this),
+        eventsSet: this.handleEventsSet.bind(this),
+        /* you can update a remote database when these fire:
+        eventAdd:
+        eventChange:
+        eventRemove:
+        */
+      };
+    // }, 0);
   }
 
-  calendarVisible = true;
-  calendarOptions: CalendarOptions = {
-    headerToolbar: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
-    },
-    initialView: 'dayGridMonth',
-    initialEvents: INITIAL_EVENTS, // alternatively, use the `events` setting to fetch from a feed
-    weekends: true,
-    editable: true,
-    selectable: true,
-    selectMirror: true,
-    dayMaxEvents: true,
-    select: this.handleDateSelect.bind(this),
-    eventClick: this.handleEventClick.bind(this),
-    eventsSet: this.handleEvents.bind(this)
-    /* you can update a remote database when these fire:
-    eventAdd:
-    eventChange:
-    eventRemove:
-    */
-  };
-  currentEvents: EventApi[] = [];
+  ngAfterViewInit(): void {
 
-  handleCalendarToggle() {
+  }
+
+  handleCalendarToggle(): void {
     this.calendarVisible = !this.calendarVisible;
   }
 
-  handleWeekendsToggle() {
-    const { calendarOptions } = this;
-    calendarOptions.weekends = !calendarOptions.weekends;
+  handleWeekendsToggle(): void {
+    this.calendarOptions.weekends = !this.calendarOptions.weekends;
   }
 
-  handleDateSelect(selectInfo: DateSelectArg) {
-    const title = prompt('Please enter a new title for your event');
-    const calendarApi = selectInfo.view.calendar;
+  // Add a new event when clicking inside a calendar cell
+  handleDateSelect(selectInfo: DateSelectArg): void {
+    const title = prompt('Please enter a title for the event ...');
+    const calendarAPI = selectInfo.view.calendar;
 
-    calendarApi.unselect(); // clear date selection
+    calendarAPI.unselect(); // Clear event selection
 
     if (title) {
-      calendarApi.addEvent({
+      calendarAPI.addEvent({
         id: createEventId(),
-        title,
+        title: title,
         start: selectInfo.startStr,
         end: selectInfo.endStr,
-        allDay: selectInfo.allDay
+        allDay: selectInfo.allDay,
       });
     }
   }
 
-  handleEventClick(clickInfo: EventClickArg) {
-    if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
-      clickInfo.event.remove();
+  handleEventClick(eventClickInfo: EventClickArg): void {
+    if (
+      confirm(
+        `Are you sure you want to delete the event '${eventClickInfo.event.title}' ?`
+      )
+    ) {
+      eventClickInfo.event.remove();
     }
   }
 
-  handleEvents(events: EventApi[]) {
+  handleEventsSet(events: EventApi[]): void {
     this.currentEvents = events;
   }
-
-
 }
