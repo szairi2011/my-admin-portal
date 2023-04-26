@@ -128,3 +128,10 @@ Another interesting baseline course for Angular is available under -- https://ww
 Fullcalendar Angular library is used
  - Many features are highlighted in 'https://fullcalendar.io/demos'
  - For a code example covering many features, we can clone this project -- 'https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/angular/'
+
+ ## Continuous Deployment
+ When using ArgoCD for continuous deployment, here are some useful steps to get up and running:
+ - Assuming that ArgoCD is already depoyed to a K8s cluster:
+    1. Login to the ArgoCD portal
+      NB: Run below command to find the argocd password; this will return a base64 encoded pwd that you will need to decode -- kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+        ** The default argocd portal credentials are admin/6NKCTa1kZCY4dARw
