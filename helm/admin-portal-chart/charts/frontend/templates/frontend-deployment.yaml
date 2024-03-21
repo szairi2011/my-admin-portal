@@ -5,7 +5,7 @@ metadata:
   name: my-admin-portal-frontend
   # namespace: misc # Deploy all child artifacts (pod, rs, etc) to 'misc' ns
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: my-admin-frontend
